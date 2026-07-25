@@ -1,1 +1,17 @@
-Priya Nair Data Analyst Professional Summary Motivated Data Analyst with 1 Year of experience delivering quality results. Skills Python, SQL, Power BI, Excel, Pandas Experience Data Analyst at ABC Solutions Duration 1 Year Responsibilities Worked on domain-specific projects and collaborated with cross- functional teams. Education MCA Certification Google Data Analytics Project Customer Churn Analysis
+Priya Nair
+Data Analyst
+Professional Summary
+Motivated Data Analyst with 1 Year of experience delivering quality results.
+Skills
+Python, SQL, Power BI, Excel, Pandas
+Experience
+Data Analyst at ABC Solutions
+Duration: 1 Year
+Responsibilities: Worked on domain-specific projects and collaborated with cross-
+functional teams.
+Education
+MCA
+Certification
+Google Data Analytics
+Project
+Customer Churn Analysis
