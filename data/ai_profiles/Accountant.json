@@ -1,0 +1,13 @@
+{
+    "job_profile": {
+        "role": "Accountant",
+        "required_skills": [
+            "Tally",
+            "GST",
+            "Excel",
+            "Accounting Standards"
+        ],
+        "minimum_experience": "2+ Years",
+        "preferred_education": "B.Com"
+    }
+}

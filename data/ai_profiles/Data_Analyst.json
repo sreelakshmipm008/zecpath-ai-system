@@ -1,0 +1,15 @@
+{
+    "job_profile": {
+        "role": "Data Analyst",
+        "required_skills": [
+            "Python",
+            "SQL",
+            "Power BI",
+            "Excel",
+            "Pandas",
+            "Statistics"
+        ],
+        "minimum_experience": "1+ Year",
+        "preferred_education": "BCA/MCA/B.Tech"
+    }
+}

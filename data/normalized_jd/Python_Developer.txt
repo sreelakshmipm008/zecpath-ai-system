@@ -1,0 +1,10 @@
+Python Developer
+Company: TechNova Solutions
+Required Skills: Python, Django, Flask, SQL, Git
+Preferred Skills: REST APIs, Docker
+Experience: 2+ Years
+Education: B.Tech/BCA/MCA
+Responsibilities: Develop backend applications and APIs.
+Certification: AWS Cloud Practitioner
+Location: Bengaluru
+Salary: 6-8 LPA

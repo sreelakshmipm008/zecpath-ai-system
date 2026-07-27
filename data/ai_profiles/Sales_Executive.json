@@ -1,0 +1,13 @@
+{
+    "job_profile": {
+        "role": "Sales Executive",
+        "required_skills": [
+            "CRM",
+            "Negotiation",
+            "Lead Generation",
+            "Presentation"
+        ],
+        "minimum_experience": "2+ Years",
+        "preferred_education": "BBA"
+    }
+}

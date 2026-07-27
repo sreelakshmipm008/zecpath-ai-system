@@ -1,0 +1,13 @@
+{
+    "job_profile": {
+        "role": "Cyber Security Analyst",
+        "required_skills": [
+            "SIEM",
+            "Network Security",
+            "Python",
+            "Ethical Hacking"
+        ],
+        "minimum_experience": "2+ Years",
+        "preferred_education": "B.Tech"
+    }
+}

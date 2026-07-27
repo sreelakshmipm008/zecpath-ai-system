@@ -1,0 +1,16 @@
+{
+    "job_profile": {
+        "role": "Python Developer",
+        "required_skills": [
+            "Python",
+            "Django",
+            "Flask",
+            "SQL",
+            "Git",
+            "REST APIs",
+            "Docker"
+        ],
+        "minimum_experience": "2+ Years",
+        "preferred_education": "B.Tech/BCA/MCA"
+    }
+}

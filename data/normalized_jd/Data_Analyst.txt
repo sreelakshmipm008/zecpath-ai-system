@@ -1,0 +1,10 @@
+Data Analyst
+Company: Insight Analytics
+Required Skills: Python, SQL, Power BI, Excel
+Preferred Skills: Pandas, Statistics
+Experience: 1+ Year
+Education: BCA/MCA/B.Tech
+Responsibilities: Analyze business data and build dashboards.
+Certification: Google Data Analytics
+Location: Hyderabad
+Salary: 5-7 LPA

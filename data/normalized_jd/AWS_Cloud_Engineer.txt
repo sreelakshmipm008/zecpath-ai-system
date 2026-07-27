@@ -1,0 +1,10 @@
+AWS Cloud Engineer
+Company: CloudSphere
+Required Skills: AWS, Linux, Docker, Terraform
+Preferred Skills: Kubernetes
+Experience: 3+ Years
+Education: B.Tech
+Responsibilities: Manage cloud infrastructure.
+Certification: AWS Solutions Architect
+Location: Bengaluru
+Salary: 8-12 LPA

@@ -1,0 +1,13 @@
+{
+    "job_profile": {
+        "role": "Staff Nurse",
+        "required_skills": [
+            "Patient Care",
+            "ICU",
+            "Emergency Care",
+            "Communication"
+        ],
+        "minimum_experience": "2+ Years",
+        "preferred_education": "B.Sc Nursing"
+    }
+}

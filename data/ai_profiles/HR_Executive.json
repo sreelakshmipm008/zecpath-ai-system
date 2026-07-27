@@ -1,0 +1,13 @@
+{
+    "job_profile": {
+        "role": "HR Executive",
+        "required_skills": [
+            "Recruitment",
+            "HRMS",
+            "Excel",
+            "Communication"
+        ],
+        "minimum_experience": "1+ Year",
+        "preferred_education": "MBA HR"
+    }
+}

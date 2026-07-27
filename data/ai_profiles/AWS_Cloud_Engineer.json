@@ -1,0 +1,14 @@
+{
+    "job_profile": {
+        "role": "AWS Cloud Engineer",
+        "required_skills": [
+            "AWS",
+            "Linux",
+            "Docker",
+            "Terraform",
+            "Kubernetes"
+        ],
+        "minimum_experience": "3+ Years",
+        "preferred_education": "B.Tech"
+    }
+}

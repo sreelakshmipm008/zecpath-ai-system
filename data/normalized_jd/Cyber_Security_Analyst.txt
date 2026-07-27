@@ -1,0 +1,10 @@
+Cyber Security Analyst
+Company: SecureNet
+Required Skills: SIEM, Network Security, Python
+Preferred Skills: Ethical Hacking
+Experience: 2+ Years
+Education: B.Tech
+Responsibilities: Monitor and respond to security threats.
+Certification: CompTIA Security+
+Location: Chennai
+Salary: 7-10 LPA
