@@ -1,0 +1,23 @@
+Rahul Sharma
+Python Developer
+
+Career Profile
+Passionate Python developer with 3 years of experience.
+
+Technical Skill Set
+Python
+Django
+SQL
+Git
+
+Employment Details
+Python Developer at XYZ Pvt Ltd
+
+Academic Qualification
+B.Tech Computer Science
+
+Certificate
+AWS Cloud Practitioner
+
+Personal Projects
+Inventory Management System

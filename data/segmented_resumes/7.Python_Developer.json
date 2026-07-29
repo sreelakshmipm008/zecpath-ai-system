@@ -1,0 +1,28 @@
+{
+    "header": [
+        "Aarav Sharma",
+        "Python Developer"
+    ],
+    "summary": [],
+    "experience": [
+        "Python Developer at ABC Solutions",
+        "Duration: 2 Years"
+    ],
+    "skills": [
+        "Python",
+        "Django",
+        "Flask",
+        "SQL",
+        "Git",
+        "functional teams."
+    ],
+    "projects": [
+        "Inventory Management System"
+    ],
+    "education": [
+        "B.Tech Computer Science"
+    ],
+    "certifications": [
+        "AWS Cloud Practitioner"
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "header": [
+        "Rahul Sharma",
+        "Python Developer"
+    ],
+    "skills": [
+        "Python",
+        "SQL",
+        "Power BI",
+        "Excel",
+        "Git"
+    ],
+    "education": [
+        "B.Tech Computer Science"
+    ],
+    "certifications": [
+        "AWS Certified Cloud Practitioner"
+    ],
+    "projects": [
+        "Inventory Management System"
+    ]
+}

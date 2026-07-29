@@ -1,0 +1,11 @@
+Rahul Sharma
+
+Education              Skills
+B.Tech                 Python
+MCA                    SQL
+
+Experience             Projects
+ABC Pvt Ltd            Inventory Management System
+
+Certifications
+Google Data Analytics Professional Certificate

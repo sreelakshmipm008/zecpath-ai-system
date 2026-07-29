@@ -1,0 +1,25 @@
+{
+    "header": [
+        "Rahul Sharma",
+        "Python Developer"
+    ],
+    "summary": [],
+    "experience": [
+        "Python Developer at XYZ Pvt Ltd"
+    ],
+    "skills": [
+        "Python",
+        "Django",
+        "SQL",
+        "Git"
+    ],
+    "education": [
+        "B.Tech Computer Science"
+    ],
+    "certifications": [
+        "AWS Cloud Practitioner"
+    ],
+    "projects": [
+        "Inventory Management System"
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "header": [
+        "Priya Nair",
+        "Data Analyst"
+    ],
+    "summary": [],
+    "experience": [
+        "Data Analyst at ABC Solutions",
+        "Duration: 1 Year"
+    ],
+    "skills": [
+        "Python",
+        "SQL",
+        "Power BI",
+        "Excel",
+        "Pandas",
+        "functional teams."
+    ],
+    "projects": [
+        "Customer Churn Analysis"
+    ],
+    "education": [
+        "MCA"
+    ],
+    "certifications": [
+        "Google Data Analytics"
+    ]
+}

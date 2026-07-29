@@ -1,0 +1,17 @@
+{
+    "header": [
+        "Rahul Sharma",
+        "Data Analyst"
+    ],
+    "skills": [
+        "Python",
+        "SQL",
+        "Power BI"
+    ],
+    "education": [
+        "B.Tech - ABC University"
+    ],
+    "certifications": [
+        "AWS Certified Cloud Practitioner"
+    ]
+}

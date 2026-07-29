@@ -1,0 +1,18 @@
+Rahul Sharma
+Data Analyst
+
+Technical Skills
+
+Skill | Level
+Python | Advanced
+SQL | Intermediate
+Power BI | Advanced
+
+Education
+
+Degree | College
+B.Tech | ABC University
+
+Certifications
+
+AWS Certified Cloud Practitioner
