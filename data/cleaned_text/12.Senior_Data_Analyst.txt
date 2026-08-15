@@ -1,0 +1,16 @@
+Arjun Nair
+Senior Data Analyst Synthetic Test Resume for Day 17 ATS Testing
+Professional Summary
+Experienced Senior Data Analyst with 7 Years of experience delivering analytical solutions, business insights,
+and data-driven reporting.
+Skills
+Python, SQL, Power BI, Excel, Tableau, Pandas
+Experience
+Senior Data Analyst at ABC Analytics Solutions - Duration: 7 Years
+Education
+M.Tech Data Science
+Certification
+Microsoft Power BI Data Analyst Associate
+Project
+Business Performance Analytics - developed dashboards and analytical reports to monitor KPIs, identify
+trends, and support business decision-making.

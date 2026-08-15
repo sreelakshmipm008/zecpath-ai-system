@@ -1,0 +1,16 @@
+Nisha Menon
+Data Analyst Synthetic Test Resume for Day 17 ATS Testing
+Professional Summary
+Motivated Data Analyst fresher with a strong academic foundation in data analysis and a keen interest in
+turning data into actionable insights.
+Skills
+Python, SQL, Excel, Power BI, Pandas
+Experience
+Fresher - No professional work experience
+Education
+MCA
+Certification
+Google Data Analytics
+Project
+Customer Sales Analysis - analyzed sales data using Python, SQL, Excel, and Power BI to identify trends
+and key performance indicators.
