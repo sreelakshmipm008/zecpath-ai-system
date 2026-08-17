@@ -23,8 +23,10 @@ class SemanticMatching:
         if not text1 or not text2:
             return 0.0
 
-        embedding1 = self.model.encode([text1])
-        embedding2 = self.model.encode([text2])
+        embeddings = self.model.encode([text1, text2])
+
+        embedding1 = embeddings[0:1]
+        embedding2 = embeddings[1:2]
 
         score = cosine_similarity(
             embedding1,

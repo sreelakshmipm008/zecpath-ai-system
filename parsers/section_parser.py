@@ -85,7 +85,17 @@ SKILL_KEYWORDS = {
     "excel", "power bi", "tableau", "pandas",
     "numpy", "matplotlib", "seaborn", "tensorflow",
     "django", "flask", "html", "css", "javascript",
-    "git", "linux", "aws", "azure", "docker"
+    "git", "linux", "aws", "azure", "docker",
+    "figma",
+    "adobe xd",
+    "photoshop",
+    "wireframing",
+    "terraform",
+    "google analytics",
+    "google ads",
+    "seo",
+    "sem",
+    "content marketing"
 }
 
 EDUCATION_KEYWORDS = {
@@ -153,6 +163,9 @@ def normalize_heading(text):
     for section,heads in SECTION_HEADERS.items():
         if text in heads:
             return section
+    # Avoid fuzzy matching full sentences as section headings
+    if len(text.split()) > 4:
+        return None
     best=None
     score_best=0
     for section,heads in SECTION_HEADERS.items():
@@ -356,9 +369,20 @@ def segment_resume(text):
             sections["header"].append(clean)
             header_lines += 1
             continue
-
+                # Continue the currently detected section
+        if current in {"summary", "skills", "experience", "education", "certifications", "projects"}:
+            if current == "skills":
+                sections[current].extend(
+                    [s.strip() for s in re.split(r",|/|;", clean) if s.strip()]
+                )
+            else:
+                sections[current].append(clean)
+            continue
         # Detect Education
-        if any(edu in lower_line for edu in EDUCATION_KEYWORDS):
+        if any(
+            re.search(rf"\b{re.escape(edu)}\b", lower_line)
+            for edu in EDUCATION_KEYWORDS
+        ): 
             current = "education"
             sections.setdefault(current, [])
             sections[current].append(clean)
@@ -392,14 +416,9 @@ def segment_resume(text):
             )
             continue
 
-        # Continue current section
-        if current == "skills":
-            sections[current].extend(
-                [s.strip() for s in re.split(r",|/|;", clean) if s.strip()]
-            )
-        else:
-            sections.setdefault(current, [])
-            sections[current].append(clean)
+    # Continue current section
+    sections.setdefault(current, [])
+    sections[current].append(clean)
 
     return sections
 

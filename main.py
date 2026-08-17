@@ -41,4 +41,4 @@ for file in os.listdir(input_folder):
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(cleaned_text)
 
-print("\n✅ Resume text extraction completed successfully!")
+print("\nResume text extraction completed successfully!")

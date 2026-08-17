@@ -21,6 +21,10 @@ def test_all_resumes_processed():
     output_files = [
         f for f in os.listdir(OUTPUT_FOLDER)
         if f.lower().endswith(".txt")
+        and f.rsplit(".", 1)[0] in {
+            os.path.splitext(input_file)[0]
+            for input_file in input_files
+        }
     ]
 
     assert len(input_files) == len(output_files), (
