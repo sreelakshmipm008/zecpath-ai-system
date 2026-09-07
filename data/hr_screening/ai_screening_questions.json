@@ -1,0 +1,1380 @@
+[
+  {
+    "question_id": "Q001",
+    "role": "Accountant",
+    "category": "Introduction",
+    "question": {
+      "en": "Could you please introduce yourself and briefly describe your professional background?",
+      "ml": "ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "low",
+    "template_id": "INTRO_001"
+  },
+  {
+    "question_id": "Q002",
+    "role": "Accountant",
+    "category": "Education",
+    "question": {
+      "en": "What is your highest educational qualification?",
+      "ml": "നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EDU_001"
+  },
+  {
+    "question_id": "Q003",
+    "role": "Accountant",
+    "category": "Experience",
+    "question": {
+      "en": "How many years of professional experience do you have in accounting?",
+      "ml": "അക്കൗണ്ടിംഗ് മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?"
+    },
+    "expected_answer_type": "number",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EXP_001"
+  },
+  {
+    "question_id": "Q004",
+    "role": "Accountant",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience using Tally for accounting tasks?",
+      "ml": "അക്കൗണ്ടിംഗ് ജോലികൾക്കായി Tally ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q005",
+    "role": "Accountant",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience handling GST-related accounting work?",
+      "ml": "GST സംബന്ധമായ അക്കൗണ്ടിംഗ് ജോലികൾ കൈകാര്യം ചെയ്യുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q006",
+    "role": "Accountant",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience using Excel for accounting work?",
+      "ml": "അക്കൗണ്ടിംഗ് ജോലികൾക്കായി Excel ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q007",
+    "role": "Accountant",
+    "category": "Skills",
+    "question": {
+      "en": "Are you familiar with accounting standards?",
+      "ml": "അക്കൗണ്ടിംഗ് സ്റ്റാൻഡേർഡുകളെക്കുറിച്ച് നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q008",
+    "role": "Accountant",
+    "category": "Location",
+    "question": {
+      "en": "Where are you currently located, and are you available to work from the required location?",
+      "ml": "നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "LOC_001"
+  },
+  {
+    "question_id": "Q009",
+    "role": "Accountant",
+    "category": "Salary",
+    "question": {
+      "en": "What are your current and expected salary requirements?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?"
+    },
+    "expected_answer_type": "range",
+    "mandatory": false,
+    "scoring_importance": "medium",
+    "template_id": "SAL_001"
+  },
+  {
+    "question_id": "Q010",
+    "role": "Accountant",
+    "category": "Notice Period",
+    "question": {
+      "en": "What is your current notice period, and when would you be available to join?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "NOTICE_001"
+  },
+  {
+    "question_id": "Q011",
+    "role": "AWS Cloud Engineer",
+    "category": "Introduction",
+    "question": {
+      "en": "Could you please introduce yourself and briefly describe your professional background?",
+      "ml": "ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "low",
+    "template_id": "INTRO_001"
+  },
+  {
+    "question_id": "Q012",
+    "role": "AWS Cloud Engineer",
+    "category": "Education",
+    "question": {
+      "en": "What is your highest educational qualification?",
+      "ml": "നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EDU_001"
+  },
+  {
+    "question_id": "Q013",
+    "role": "AWS Cloud Engineer",
+    "category": "Experience",
+    "question": {
+      "en": "How many years of professional experience do you have in cloud engineering?",
+      "ml": "ക്ലൗഡ് എഞ്ചിനീയറിംഗ് മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?"
+    },
+    "expected_answer_type": "number",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EXP_001"
+  },
+  {
+    "question_id": "Q014",
+    "role": "AWS Cloud Engineer",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have professional experience working with AWS?",
+      "ml": "AWS-ൽ പ്രൊഫഷണൽമായി പ്രവർത്തിച്ച പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q015",
+    "role": "AWS Cloud Engineer",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience working with Linux systems?",
+      "ml": "Linux സിസ്റ്റങ്ങളിൽ പ്രവർത്തിച്ച പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q016",
+    "role": "AWS Cloud Engineer",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience using Docker?",
+      "ml": "Docker ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q017",
+    "role": "AWS Cloud Engineer",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience with Terraform?",
+      "ml": "Terraform ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q018",
+    "role": "AWS Cloud Engineer",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience working with Kubernetes?",
+      "ml": "Kubernetes ഉപയോഗിച്ച് പ്രവർത്തിച്ച പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q019",
+    "role": "AWS Cloud Engineer",
+    "category": "Location",
+    "question": {
+      "en": "Where are you currently located, and are you available to work from the required location?",
+      "ml": "നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "LOC_001"
+  },
+  {
+    "question_id": "Q020",
+    "role": "AWS Cloud Engineer",
+    "category": "Salary",
+    "question": {
+      "en": "What are your current and expected salary requirements?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?"
+    },
+    "expected_answer_type": "range",
+    "mandatory": false,
+    "scoring_importance": "medium",
+    "template_id": "SAL_001"
+  },
+  {
+    "question_id": "Q021",
+    "role": "AWS Cloud Engineer",
+    "category": "Notice Period",
+    "question": {
+      "en": "What is your current notice period, and when would you be available to join?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "NOTICE_001"
+  },
+  {
+    "question_id": "Q022",
+    "role": "Cyber Security Analyst",
+    "category": "Introduction",
+    "question": {
+      "en": "Could you please introduce yourself and briefly describe your professional background?",
+      "ml": "ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "low",
+    "template_id": "INTRO_001"
+  },
+  {
+    "question_id": "Q023",
+    "role": "Cyber Security Analyst",
+    "category": "Education",
+    "question": {
+      "en": "What is your highest educational qualification?",
+      "ml": "നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EDU_001"
+  },
+  {
+    "question_id": "Q024",
+    "role": "Cyber Security Analyst",
+    "category": "Experience",
+    "question": {
+      "en": "How many years of professional experience do you have in cybersecurity?",
+      "ml": "സൈബർ സുരക്ഷാ മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?"
+    },
+    "expected_answer_type": "number",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EXP_001"
+  },
+  {
+    "question_id": "Q025",
+    "role": "Cyber Security Analyst",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have professional experience working with SIEM systems?",
+      "ml": "SIEM സിസ്റ്റങ്ങളിൽ പ്രൊഫഷണൽമായി പ്രവർത്തിച്ച പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q026",
+    "role": "Cyber Security Analyst",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience in network security?",
+      "ml": "നെറ്റ്‌വർക്ക് സുരക്ഷയിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q027",
+    "role": "Cyber Security Analyst",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience using Python for cybersecurity-related tasks?",
+      "ml": "സൈബർ സുരക്ഷയുമായി ബന്ധപ്പെട്ട ജോലികൾക്കായി Python ഉപയോഗിച്ച പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q028",
+    "role": "Cyber Security Analyst",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience with ethical hacking?",
+      "ml": "Ethical hacking-ൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q029",
+    "role": "Cyber Security Analyst",
+    "category": "Location",
+    "question": {
+      "en": "Where are you currently located, and are you available to work from the required location?",
+      "ml": "നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "LOC_001"
+  },
+  {
+    "question_id": "Q030",
+    "role": "Cyber Security Analyst",
+    "category": "Salary",
+    "question": {
+      "en": "What are your current and expected salary requirements?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?"
+    },
+    "expected_answer_type": "range",
+    "mandatory": false,
+    "scoring_importance": "medium",
+    "template_id": "SAL_001"
+  },
+  {
+    "question_id": "Q031",
+    "role": "Cyber Security Analyst",
+    "category": "Notice Period",
+    "question": {
+      "en": "What is your current notice period, and when would you be available to join?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "NOTICE_001"
+  },
+  {
+    "question_id": "Q032",
+    "role": "Data Analyst",
+    "category": "Introduction",
+    "question": {
+      "en": "Could you please introduce yourself and briefly describe your professional background?",
+      "ml": "ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "low",
+    "template_id": "INTRO_001"
+  },
+  {
+    "question_id": "Q033",
+    "role": "Data Analyst",
+    "category": "Education",
+    "question": {
+      "en": "What is your highest educational qualification?",
+      "ml": "നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EDU_001"
+  },
+  {
+    "question_id": "Q034",
+    "role": "Data Analyst",
+    "category": "Experience",
+    "question": {
+      "en": "How many years of professional experience do you have in data analysis?",
+      "ml": "ഡാറ്റാ അനാലിസിസ് മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?"
+    },
+    "expected_answer_type": "number",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EXP_001"
+  },
+  {
+    "question_id": "Q035",
+    "role": "Data Analyst",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have professional experience using Python for data analysis?",
+      "ml": "ഡാറ്റാ അനാലിസിസിനായി Python ഉപയോഗിച്ചുള്ള പ്രൊഫഷണൽ പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q036",
+    "role": "Data Analyst",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience working with SQL?",
+      "ml": "SQL ഉപയോഗിച്ച് പ്രവർത്തിച്ച പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q037",
+    "role": "Data Analyst",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience using Power BI?",
+      "ml": "Power BI ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q038",
+    "role": "Data Analyst",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience using Excel for data analysis?",
+      "ml": "ഡാറ്റാ അനാലിസിസിനായി Excel ഉപയോഗിച്ച പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q039",
+    "role": "Data Analyst",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience using Pandas for data analysis?",
+      "ml": "ഡാറ്റാ അനാലിസിസിനായി Pandas ഉപയോഗിച്ച പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q040",
+    "role": "Data Analyst",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have knowledge of statistics for data analysis?",
+      "ml": "ഡാറ്റാ അനാലിസിസിനായി സ്റ്റാറ്റിസ്റ്റിക്സിൽ അറിവുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q041",
+    "role": "Data Analyst",
+    "category": "Location",
+    "question": {
+      "en": "Where are you currently located, and are you available to work from the required location?",
+      "ml": "നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "LOC_001"
+  },
+  {
+    "question_id": "Q042",
+    "role": "Data Analyst",
+    "category": "Salary",
+    "question": {
+      "en": "What are your current and expected salary requirements?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?"
+    },
+    "expected_answer_type": "range",
+    "mandatory": false,
+    "scoring_importance": "medium",
+    "template_id": "SAL_001"
+  },
+  {
+    "question_id": "Q043",
+    "role": "Data Analyst",
+    "category": "Notice Period",
+    "question": {
+      "en": "What is your current notice period, and when would you be available to join?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "NOTICE_001"
+  },
+  {
+    "question_id": "Q044",
+    "role": "Digital Marketing Executive",
+    "category": "Introduction",
+    "question": {
+      "en": "Could you please introduce yourself and briefly describe your professional background?",
+      "ml": "ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "low",
+    "template_id": "INTRO_001"
+  },
+  {
+    "question_id": "Q045",
+    "role": "Digital Marketing Executive",
+    "category": "Education",
+    "question": {
+      "en": "What is your highest educational qualification?",
+      "ml": "നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EDU_001"
+  },
+  {
+    "question_id": "Q046",
+    "role": "Digital Marketing Executive",
+    "category": "Experience",
+    "question": {
+      "en": "How many years of professional experience do you have in digital marketing?",
+      "ml": "ഡിജിറ്റൽ മാർക്കറ്റിംഗ് മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?"
+    },
+    "expected_answer_type": "number",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EXP_001"
+  },
+  {
+    "question_id": "Q047",
+    "role": "Digital Marketing Executive",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have professional experience with SEO?",
+      "ml": "SEO-യിൽ പ്രൊഫഷണൽ പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q048",
+    "role": "Digital Marketing Executive",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience working with SEM?",
+      "ml": "SEM-ൽ പ്രവർത്തിച്ച പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q049",
+    "role": "Digital Marketing Executive",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience using Google Analytics?",
+      "ml": "Google Analytics ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q050",
+    "role": "Digital Marketing Executive",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience in content marketing?",
+      "ml": "Content marketing-ൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q051",
+    "role": "Digital Marketing Executive",
+    "category": "Location",
+    "question": {
+      "en": "Where are you currently located, and are you available to work from the required location?",
+      "ml": "നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "LOC_001"
+  },
+  {
+    "question_id": "Q052",
+    "role": "Digital Marketing Executive",
+    "category": "Salary",
+    "question": {
+      "en": "What are your current and expected salary requirements?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?"
+    },
+    "expected_answer_type": "range",
+    "mandatory": false,
+    "scoring_importance": "medium",
+    "template_id": "SAL_001"
+  },
+  {
+    "question_id": "Q053",
+    "role": "Digital Marketing Executive",
+    "category": "Notice Period",
+    "question": {
+      "en": "What is your current notice period, and when would you be available to join?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "NOTICE_001"
+  },
+  {
+    "question_id": "Q054",
+    "role": "HR Executive",
+    "category": "Introduction",
+    "question": {
+      "en": "Could you please introduce yourself and briefly describe your professional background?",
+      "ml": "ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "low",
+    "template_id": "INTRO_001"
+  },
+  {
+    "question_id": "Q055",
+    "role": "HR Executive",
+    "category": "Education",
+    "question": {
+      "en": "What is your highest educational qualification?",
+      "ml": "നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EDU_001"
+  },
+  {
+    "question_id": "Q056",
+    "role": "HR Executive",
+    "category": "Experience",
+    "question": {
+      "en": "How many years of professional experience do you have in human resources?",
+      "ml": "ഹ്യൂമൻ റിസോഴ്സസ് മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?"
+    },
+    "expected_answer_type": "number",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EXP_001"
+  },
+  {
+    "question_id": "Q057",
+    "role": "HR Executive",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have professional experience in recruitment?",
+      "ml": "റിക്രൂട്ട്മെന്റ് മേഖലയിൽ നിങ്ങൾക്ക് പ്രൊഫഷണൽ പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q058",
+    "role": "HR Executive",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience working with HRMS systems?",
+      "ml": "HRMS സിസ്റ്റങ്ങളിൽ പ്രവർത്തിച്ച പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q059",
+    "role": "HR Executive",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience using Excel for HR-related work?",
+      "ml": "HR സംബന്ധമായ ജോലികൾക്കായി Excel ഉപയോഗിച്ച പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q060",
+    "role": "HR Executive",
+    "category": "Skills",
+    "question": {
+      "en": "Would you consider communication one of your professional strengths?",
+      "ml": "ആശയവിനിമയം നിങ്ങളുടെ പ്രൊഫഷണൽ ശക്തികളിൽ ഒന്നാണെന്ന് നിങ്ങൾ കരുതുന്നുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q061",
+    "role": "HR Executive",
+    "category": "Location",
+    "question": {
+      "en": "Where are you currently located, and are you available to work from the required location?",
+      "ml": "നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "LOC_001"
+  },
+  {
+    "question_id": "Q062",
+    "role": "HR Executive",
+    "category": "Salary",
+    "question": {
+      "en": "What are your current and expected salary requirements?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?"
+    },
+    "expected_answer_type": "range",
+    "mandatory": false,
+    "scoring_importance": "medium",
+    "template_id": "SAL_001"
+  },
+  {
+    "question_id": "Q063",
+    "role": "HR Executive",
+    "category": "Notice Period",
+    "question": {
+      "en": "What is your current notice period, and when would you be available to join?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "NOTICE_001"
+  },
+  {
+    "question_id": "Q064",
+    "role": "Python Developer",
+    "category": "Introduction",
+    "question": {
+      "en": "Could you please introduce yourself and briefly describe your professional background?",
+      "ml": "ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "low",
+    "template_id": "INTRO_001"
+  },
+  {
+    "question_id": "Q065",
+    "role": "Python Developer",
+    "category": "Education",
+    "question": {
+      "en": "What is your highest educational qualification?",
+      "ml": "നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EDU_001"
+  },
+  {
+    "question_id": "Q066",
+    "role": "Python Developer",
+    "category": "Experience",
+    "question": {
+      "en": "How many years of professional experience do you have in Python development?",
+      "ml": "Python ഡെവലപ്മെന്റ് മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?"
+    },
+    "expected_answer_type": "number",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EXP_001"
+  },
+  {
+    "question_id": "Q067",
+    "role": "Python Developer",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have professional experience with Python?",
+      "ml": "Python-ൽ പ്രൊഫഷണൽ പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q068",
+    "role": "Python Developer",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience working with Django?",
+      "ml": "Django ഉപയോഗിച്ച് പ്രവർത്തിച്ച പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q069",
+    "role": "Python Developer",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience working with Flask?",
+      "ml": "Flask ഉപയോഗിച്ച് പ്രവർത്തിച്ച പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q070",
+    "role": "Python Developer",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience working with SQL?",
+      "ml": "SQL ഉപയോഗിച്ച് പ്രവർത്തിച്ച പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q071",
+    "role": "Python Developer",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience using Git?",
+      "ml": "Git ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q072",
+    "role": "Python Developer",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience developing or working with REST APIs?",
+      "ml": "REST APIs വികസിപ്പിക്കുന്നതിലോ അവയുമായി പ്രവർത്തിക്കുന്നതിലോ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q073",
+    "role": "Python Developer",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience using Docker?",
+      "ml": "Docker ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q074",
+    "role": "Python Developer",
+    "category": "Location",
+    "question": {
+      "en": "Where are you currently located, and are you available to work from the required location?",
+      "ml": "നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "LOC_001"
+  },
+  {
+    "question_id": "Q075",
+    "role": "Python Developer",
+    "category": "Salary",
+    "question": {
+      "en": "What are your current and expected salary requirements?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?"
+    },
+    "expected_answer_type": "range",
+    "mandatory": false,
+    "scoring_importance": "medium",
+    "template_id": "SAL_001"
+  },
+  {
+    "question_id": "Q076",
+    "role": "Python Developer",
+    "category": "Notice Period",
+    "question": {
+      "en": "What is your current notice period, and when would you be available to join?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "NOTICE_001"
+  },
+  {
+    "question_id": "Q077",
+    "role": "Sales Executive",
+    "category": "Introduction",
+    "question": {
+      "en": "Could you please introduce yourself and briefly describe your professional background?",
+      "ml": "ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "low",
+    "template_id": "INTRO_001"
+  },
+  {
+    "question_id": "Q078",
+    "role": "Sales Executive",
+    "category": "Education",
+    "question": {
+      "en": "What is your highest educational qualification?",
+      "ml": "നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EDU_001"
+  },
+  {
+    "question_id": "Q079",
+    "role": "Sales Executive",
+    "category": "Experience",
+    "question": {
+      "en": "How many years of professional experience do you have in sales?",
+      "ml": "സെയിൽസ് മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?"
+    },
+    "expected_answer_type": "number",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EXP_001"
+  },
+  {
+    "question_id": "Q080",
+    "role": "Sales Executive",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have professional experience using CRM systems?",
+      "ml": "CRM സിസ്റ്റങ്ങൾ ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പ്രൊഫഷണൽ പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q081",
+    "role": "Sales Executive",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience in negotiation?",
+      "ml": "ചർച്ചകളിലും നെഗോഷിയേഷനിലും നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q082",
+    "role": "Sales Executive",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience in lead generation?",
+      "ml": "ലീഡ് ജനറേഷനിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q083",
+    "role": "Sales Executive",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience giving professional presentations?",
+      "ml": "പ്രൊഫഷണൽ പ്രസന്റേഷനുകൾ നടത്തുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q084",
+    "role": "Sales Executive",
+    "category": "Location",
+    "question": {
+      "en": "Where are you currently located, and are you available to work from the required location?",
+      "ml": "നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "LOC_001"
+  },
+  {
+    "question_id": "Q085",
+    "role": "Sales Executive",
+    "category": "Salary",
+    "question": {
+      "en": "What are your current and expected salary requirements?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?"
+    },
+    "expected_answer_type": "range",
+    "mandatory": false,
+    "scoring_importance": "medium",
+    "template_id": "SAL_001"
+  },
+  {
+    "question_id": "Q086",
+    "role": "Sales Executive",
+    "category": "Notice Period",
+    "question": {
+      "en": "What is your current notice period, and when would you be available to join?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "NOTICE_001"
+  },
+  {
+    "question_id": "Q087",
+    "role": "Staff Nurse",
+    "category": "Introduction",
+    "question": {
+      "en": "Could you please introduce yourself and briefly describe your professional background?",
+      "ml": "ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "low",
+    "template_id": "INTRO_001"
+  },
+  {
+    "question_id": "Q088",
+    "role": "Staff Nurse",
+    "category": "Education",
+    "question": {
+      "en": "What is your highest educational qualification?",
+      "ml": "നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EDU_001"
+  },
+  {
+    "question_id": "Q089",
+    "role": "Staff Nurse",
+    "category": "Experience",
+    "question": {
+      "en": "How many years of professional experience do you have in nursing?",
+      "ml": "നഴ്സിംഗ് മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?"
+    },
+    "expected_answer_type": "number",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EXP_001"
+  },
+  {
+    "question_id": "Q090",
+    "role": "Staff Nurse",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have professional experience in patient care?",
+      "ml": "രോഗി പരിചരണത്തിൽ നിങ്ങൾക്ക് പ്രൊഫഷണൽ പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q091",
+    "role": "Staff Nurse",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience working in an ICU environment?",
+      "ml": "ICU പരിതസ്ഥിതിയിൽ പ്രവർത്തിച്ച പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q092",
+    "role": "Staff Nurse",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience providing emergency care?",
+      "ml": "അടിയന്തര പരിചരണം നൽകുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q093",
+    "role": "Staff Nurse",
+    "category": "Skills",
+    "question": {
+      "en": "Would you consider communication one of your professional strengths?",
+      "ml": "ആശയവിനിമയം നിങ്ങളുടെ പ്രൊഫഷണൽ ശക്തികളിൽ ഒന്നാണെന്ന് നിങ്ങൾ കരുതുന്നുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q094",
+    "role": "Staff Nurse",
+    "category": "Location",
+    "question": {
+      "en": "Where are you currently located, and are you available to work from the required location?",
+      "ml": "നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "LOC_001"
+  },
+  {
+    "question_id": "Q095",
+    "role": "Staff Nurse",
+    "category": "Salary",
+    "question": {
+      "en": "What are your current and expected salary requirements?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?"
+    },
+    "expected_answer_type": "range",
+    "mandatory": false,
+    "scoring_importance": "medium",
+    "template_id": "SAL_001"
+  },
+  {
+    "question_id": "Q096",
+    "role": "Staff Nurse",
+    "category": "Notice Period",
+    "question": {
+      "en": "What is your current notice period, and when would you be available to join?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "NOTICE_001"
+  },
+  {
+    "question_id": "Q097",
+    "role": "UI/UX Designer",
+    "category": "Introduction",
+    "question": {
+      "en": "Could you please introduce yourself and briefly describe your professional background?",
+      "ml": "ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "low",
+    "template_id": "INTRO_001"
+  },
+  {
+    "question_id": "Q098",
+    "role": "UI/UX Designer",
+    "category": "Education",
+    "question": {
+      "en": "What is your highest educational qualification?",
+      "ml": "നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EDU_001"
+  },
+  {
+    "question_id": "Q099",
+    "role": "UI/UX Designer",
+    "category": "Experience",
+    "question": {
+      "en": "How many years of professional experience do you have in UI/UX design?",
+      "ml": "UI/UX ഡിസൈൻ മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?"
+    },
+    "expected_answer_type": "number",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "EXP_001"
+  },
+  {
+    "question_id": "Q100",
+    "role": "UI/UX Designer",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have professional experience using Figma?",
+      "ml": "Figma ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പ്രൊഫഷണൽ പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q101",
+    "role": "UI/UX Designer",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience using Adobe XD?",
+      "ml": "Adobe XD ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q102",
+    "role": "UI/UX Designer",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience creating wireframes?",
+      "ml": "Wireframes തയ്യാറാക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "high",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q103",
+    "role": "UI/UX Designer",
+    "category": "Skills",
+    "question": {
+      "en": "Do you have experience working with HTML and CSS?",
+      "ml": "HTML, CSS എന്നിവ ഉപയോഗിച്ച് പ്രവർത്തിച്ച പരിചയമുണ്ടോ?"
+    },
+    "expected_answer_type": "yes_no",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "SKILL_001"
+  },
+  {
+    "question_id": "Q104",
+    "role": "UI/UX Designer",
+    "category": "Location",
+    "question": {
+      "en": "Where are you currently located, and are you available to work from the required location?",
+      "ml": "നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "LOC_001"
+  },
+  {
+    "question_id": "Q105",
+    "role": "UI/UX Designer",
+    "category": "Salary",
+    "question": {
+      "en": "What are your current and expected salary requirements?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?"
+    },
+    "expected_answer_type": "range",
+    "mandatory": false,
+    "scoring_importance": "medium",
+    "template_id": "SAL_001"
+  },
+  {
+    "question_id": "Q106",
+    "role": "UI/UX Designer",
+    "category": "Notice Period",
+    "question": {
+      "en": "What is your current notice period, and when would you be available to join?",
+      "ml": "നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?"
+    },
+    "expected_answer_type": "text",
+    "mandatory": true,
+    "scoring_importance": "medium",
+    "template_id": "NOTICE_001"
+  }
+]

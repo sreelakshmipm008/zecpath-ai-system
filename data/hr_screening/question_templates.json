@@ -1,0 +1,44 @@
+[
+  {
+    "template_id": "INTRO_001",
+    "category": "Introduction",
+    "template_en": "Could you please introduce yourself and briefly describe your professional background?",
+    "template_ml": "ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?"
+  },
+  {
+    "template_id": "EDU_001",
+    "category": "Education",
+    "template_en": "Could you tell us about your highest educational qualification?",
+    "template_ml": "നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യതയെക്കുറിച്ച് പറയാമോ?"
+  },
+  {
+    "template_id": "EXP_001",
+    "category": "Experience",
+    "template_en": "How many years of professional experience do you have in this field?",
+    "template_ml": "ഈ മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?"
+  },
+  {
+    "template_id": "SKILL_001",
+    "category": "Skills",
+    "template_en": "Which of the required skills for this role do you have experience with?",
+    "template_ml": "ഈ തസ്തികയ്ക്ക് ആവശ്യമായ ഏതെല്ലാം കഴിവുകളിൽ നിങ്ങൾക്ക് പരിചയമുണ്ട്?"
+  },
+  {
+    "template_id": "LOC_001",
+    "category": "Location",
+    "template_en": "Where are you currently located, and are you available to work from the required location?",
+    "template_ml": "നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?"
+  },
+  {
+    "template_id": "SAL_001",
+    "category": "Salary",
+    "template_en": "What are your current and expected salary requirements?",
+    "template_ml": "നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?"
+  },
+  {
+    "template_id": "NOTICE_001",
+    "category": "Notice Period",
+    "template_en": "What is your current notice period, and when would you be available to join?",
+    "template_ml": "നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?"
+  }
+]

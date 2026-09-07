@@ -1,0 +1,117 @@
+question_id,role,category,question_en,question_ml,expected_answer_type,mandatory,scoring_importance,template_id
+
+Q001,Accountant,Introduction,"Could you please introduce yourself and briefly describe your professional background?","ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?",text,true,low,INTRO_001
+Q002,Accountant,Education,"What is your highest educational qualification?","നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?",text,true,high,EDU_001
+Q003,Accountant,Experience,"How many years of professional experience do you have in accounting?","അക്കൗണ്ടിംഗ് മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?",number,true,high,EXP_001
+Q004,Accountant,Skills,"Do you have experience using Tally for accounting tasks?","അക്കൗണ്ടിംഗ് ജോലികൾക്കായി Tally ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q005,Accountant,Skills,"Do you have experience handling GST-related accounting work?","GST സംബന്ധമായ അക്കൗണ്ടിംഗ് ജോലികൾ കൈകാര്യം ചെയ്യുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q006,Accountant,Skills,"Do you have experience using Excel for accounting work?","അക്കൗണ്ടിംഗ് ജോലികൾക്കായി Excel ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,medium,SKILL_001
+Q007,Accountant,Skills,"Are you familiar with accounting standards?","അക്കൗണ്ടിംഗ് സ്റ്റാൻഡേർഡുകളെക്കുറിച്ച് നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q008,Accountant,Location,"Where are you currently located, and are you available to work from the required location?","നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?",text,true,medium,LOC_001
+Q009,Accountant,Salary,"What are your current and expected salary requirements?","നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?",range,false,medium,SAL_001
+Q010,Accountant,Notice Period,"What is your current notice period, and when would you be available to join?","നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?",text,true,medium,NOTICE_001
+
+Q011,AWS Cloud Engineer,Introduction,"Could you please introduce yourself and briefly describe your professional background?","ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?",text,true,low,INTRO_001
+Q012,AWS Cloud Engineer,Education,"What is your highest educational qualification?","നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?",text,true,high,EDU_001
+Q013,AWS Cloud Engineer,Experience,"How many years of professional experience do you have in cloud engineering?","ക്ലൗഡ് എഞ്ചിനീയറിംഗ് മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?",number,true,high,EXP_001
+Q014,AWS Cloud Engineer,Skills,"Do you have professional experience working with AWS?","AWS-ൽ പ്രൊഫഷണൽമായി പ്രവർത്തിച്ച പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q015,AWS Cloud Engineer,Skills,"Do you have experience working with Linux systems?","Linux സിസ്റ്റങ്ങളിൽ പ്രവർത്തിച്ച പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q016,AWS Cloud Engineer,Skills,"Do you have experience using Docker?","Docker ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,medium,SKILL_001
+Q017,AWS Cloud Engineer,Skills,"Do you have experience with Terraform?","Terraform ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q018,AWS Cloud Engineer,Skills,"Do you have experience working with Kubernetes?","Kubernetes ഉപയോഗിച്ച് പ്രവർത്തിച്ച പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q019,AWS Cloud Engineer,Location,"Where are you currently located, and are you available to work from the required location?","നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?",text,true,medium,LOC_001
+Q020,AWS Cloud Engineer,Salary,"What are your current and expected salary requirements?","നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?",range,false,medium,SAL_001
+Q021,AWS Cloud Engineer,Notice Period,"What is your current notice period, and when would you be available to join?","നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?",text,true,medium,NOTICE_001
+
+Q022,Cyber Security Analyst,Introduction,"Could you please introduce yourself and briefly describe your professional background?","ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?",text,true,low,INTRO_001
+Q023,Cyber Security Analyst,Education,"What is your highest educational qualification?","നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?",text,true,high,EDU_001
+Q024,Cyber Security Analyst,Experience,"How many years of professional experience do you have in cybersecurity?","സൈബർ സുരക്ഷാ മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?",number,true,high,EXP_001
+Q025,Cyber Security Analyst,Skills,"Do you have professional experience working with SIEM systems?","SIEM സിസ്റ്റങ്ങളിൽ പ്രൊഫഷണൽമായി പ്രവർത്തിച്ച പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q026,Cyber Security Analyst,Skills,"Do you have experience in network security?","നെറ്റ്‌വർക്ക് സുരക്ഷയിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q027,Cyber Security Analyst,Skills,"Do you have experience using Python for cybersecurity-related tasks?","സൈബർ സുരക്ഷയുമായി ബന്ധപ്പെട്ട ജോലികൾക്കായി Python ഉപയോഗിച്ച പരിചയമുണ്ടോ?",yes_no,true,medium,SKILL_001
+Q028,Cyber Security Analyst,Skills,"Do you have experience with ethical hacking?","Ethical hacking-ൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q029,Cyber Security Analyst,Location,"Where are you currently located, and are you available to work from the required location?","നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?",text,true,medium,LOC_001
+Q030,Cyber Security Analyst,Salary,"What are your current and expected salary requirements?","നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?",range,false,medium,SAL_001
+Q031,Cyber Security Analyst,Notice Period,"What is your current notice period, and when would you be available to join?","നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?",text,true,medium,NOTICE_001
+
+Q032,Data Analyst,Introduction,"Could you please introduce yourself and briefly describe your professional background?","ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?",text,true,low,INTRO_001
+Q033,Data Analyst,Education,"What is your highest educational qualification?","നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?",text,true,high,EDU_001
+Q034,Data Analyst,Experience,"How many years of professional experience do you have in data analysis?","ഡാറ്റാ അനാലിസിസ് മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?",number,true,high,EXP_001
+Q035,Data Analyst,Skills,"Do you have professional experience using Python for data analysis?","ഡാറ്റാ അനാലിസിസിനായി Python ഉപയോഗിച്ചുള്ള പ്രൊഫഷണൽ പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q036,Data Analyst,Skills,"Do you have experience working with SQL?","SQL ഉപയോഗിച്ച് പ്രവർത്തിച്ച പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q037,Data Analyst,Skills,"Do you have experience using Power BI?","Power BI ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q038,Data Analyst,Skills,"Do you have experience using Excel for data analysis?","ഡാറ്റാ അനാലിസിസിനായി Excel ഉപയോഗിച്ച പരിചയമുണ്ടോ?",yes_no,true,medium,SKILL_001
+Q039,Data Analyst,Skills,"Do you have experience using Pandas for data analysis?","ഡാറ്റാ അനാലിസിസിനായി Pandas ഉപയോഗിച്ച പരിചയമുണ്ടോ?",yes_no,true,medium,SKILL_001
+Q040,Data Analyst,Skills,"Do you have knowledge of statistics for data analysis?","ഡാറ്റാ അനാലിസിസിനായി സ്റ്റാറ്റിസ്റ്റിക്സിൽ അറിവുണ്ടോ?",yes_no,true,high,SKILL_001
+Q041,Data Analyst,Location,"Where are you currently located, and are you available to work from the required location?","നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?",text,true,medium,LOC_001
+Q042,Data Analyst,Salary,"What are your current and expected salary requirements?","നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?",range,false,medium,SAL_001
+Q043,Data Analyst,Notice Period,"What is your current notice period, and when would you be available to join?","നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?",text,true,medium,NOTICE_001
+
+Q044,Digital Marketing Executive,Introduction,"Could you please introduce yourself and briefly describe your professional background?","ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?",text,true,low,INTRO_001
+Q045,Digital Marketing Executive,Education,"What is your highest educational qualification?","നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?",text,true,high,EDU_001
+Q046,Digital Marketing Executive,Experience,"How many years of professional experience do you have in digital marketing?","ഡിജിറ്റൽ മാർക്കറ്റിംഗ് മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?",number,true,high,EXP_001
+Q047,Digital Marketing Executive,Skills,"Do you have professional experience with SEO?","SEO-യിൽ പ്രൊഫഷണൽ പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q048,Digital Marketing Executive,Skills,"Do you have experience working with SEM?","SEM-ൽ പ്രവർത്തിച്ച പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q049,Digital Marketing Executive,Skills,"Do you have experience using Google Analytics?","Google Analytics ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q050,Digital Marketing Executive,Skills,"Do you have experience in content marketing?","Content marketing-ൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q051,Digital Marketing Executive,Location,"Where are you currently located, and are you available to work from the required location?","നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?",text,true,medium,LOC_001
+Q052,Digital Marketing Executive,Salary,"What are your current and expected salary requirements?","നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?",range,false,medium,SAL_001
+Q053,Digital Marketing Executive,Notice Period,"What is your current notice period, and when would you be available to join?","നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?",text,true,medium,NOTICE_001
+
+Q054,HR Executive,Introduction,"Could you please introduce yourself and briefly describe your professional background?","ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?",text,true,low,INTRO_001
+Q055,HR Executive,Education,"What is your highest educational qualification?","നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?",text,true,high,EDU_001
+Q056,HR Executive,Experience,"How many years of professional experience do you have in human resources?","ഹ്യൂമൻ റിസോഴ്സസ് മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?",number,true,high,EXP_001
+Q057,HR Executive,Skills,"Do you have professional experience in recruitment?","റിക്രൂട്ട്മെന്റ് മേഖലയിൽ നിങ്ങൾക്ക് പ്രൊഫഷണൽ പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q058,HR Executive,Skills,"Do you have experience working with HRMS systems?","HRMS സിസ്റ്റങ്ങളിൽ പ്രവർത്തിച്ച പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q059,HR Executive,Skills,"Do you have experience using Excel for HR-related work?","HR സംബന്ധമായ ജോലികൾക്കായി Excel ഉപയോഗിച്ച പരിചയമുണ്ടോ?",yes_no,true,medium,SKILL_001
+Q060,HR Executive,Skills,"Would you consider communication one of your professional strengths?","ആശയവിനിമയം നിങ്ങളുടെ പ്രൊഫഷണൽ ശക്തികളിൽ ഒന്നാണെന്ന് നിങ്ങൾ കരുതുന്നുണ്ടോ?",yes_no,true,high,SKILL_001
+Q061,HR Executive,Location,"Where are you currently located, and are you available to work from the required location?","നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?",text,true,medium,LOC_001
+Q062,HR Executive,Salary,"What are your current and expected salary requirements?","നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?",range,false,medium,SAL_001
+Q063,HR Executive,Notice Period,"What is your current notice period, and when would you be available to join?","നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?",text,true,medium,NOTICE_001
+
+Q064,Python Developer,Introduction,"Could you please introduce yourself and briefly describe your professional background?","ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?",text,true,low,INTRO_001
+Q065,Python Developer,Education,"What is your highest educational qualification?","നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?",text,true,high,EDU_001
+Q066,Python Developer,Experience,"How many years of professional experience do you have in Python development?","Python ഡെവലപ്മെന്റ് മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?",number,true,high,EXP_001
+Q067,Python Developer,Skills,"Do you have professional experience with Python?","Python-ൽ പ്രൊഫഷണൽ പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q068,Python Developer,Skills,"Do you have experience working with Django?","Django ഉപയോഗിച്ച് പ്രവർത്തിച്ച പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q069,Python Developer,Skills,"Do you have experience working with Flask?","Flask ഉപയോഗിച്ച് പ്രവർത്തിച്ച പരിചയമുണ്ടോ?",yes_no,true,medium,SKILL_001
+Q070,Python Developer,Skills,"Do you have experience working with SQL?","SQL ഉപയോഗിച്ച് പ്രവർത്തിച്ച പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q071,Python Developer,Skills,"Do you have experience using Git?","Git ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,medium,SKILL_001
+Q072,Python Developer,Skills,"Do you have experience developing or working with REST APIs?","REST APIs വികസിപ്പിക്കുന്നതിലോ അവയുമായി പ്രവർത്തിക്കുന്നതിലോ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q073,Python Developer,Skills,"Do you have experience using Docker?","Docker ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,medium,SKILL_001
+Q074,Python Developer,Location,"Where are you currently located, and are you available to work from the required location?","നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?",text,true,medium,LOC_001
+Q075,Python Developer,Salary,"What are your current and expected salary requirements?","നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?",range,false,medium,SAL_001
+Q076,Python Developer,Notice Period,"What is your current notice period, and when would you be available to join?","നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?",text,true,medium,NOTICE_001
+
+Q077,Sales Executive,Introduction,"Could you please introduce yourself and briefly describe your professional background?","ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?",text,true,low,INTRO_001
+Q078,Sales Executive,Education,"What is your highest educational qualification?","നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?",text,true,high,EDU_001
+Q079,Sales Executive,Experience,"How many years of professional experience do you have in sales?","സെയിൽസ് മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?",number,true,high,EXP_001
+Q080,Sales Executive,Skills,"Do you have professional experience using CRM systems?","CRM സിസ്റ്റങ്ങൾ ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പ്രൊഫഷണൽ പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q081,Sales Executive,Skills,"Do you have experience in negotiation?","ചർച്ചകളിലും നെഗോഷിയേഷനിലും നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q082,Sales Executive,Skills,"Do you have experience in lead generation?","ലീഡ് ജനറേഷനിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q083,Sales Executive,Skills,"Do you have experience giving professional presentations?","പ്രൊഫഷണൽ പ്രസന്റേഷനുകൾ നടത്തുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,medium,SKILL_001
+Q084,Sales Executive,Location,"Where are you currently located, and are you available to work from the required location?","നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?",text,true,medium,LOC_001
+Q085,Sales Executive,Salary,"What are your current and expected salary requirements?","നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?",range,false,medium,SAL_001
+Q086,Sales Executive,Notice Period,"What is your current notice period, and when would you be available to join?","നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?",text,true,medium,NOTICE_001
+
+Q087,Staff Nurse,Introduction,"Could you please introduce yourself and briefly describe your professional background?","ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?",text,true,low,INTRO_001
+Q088,Staff Nurse,Education,"What is your highest educational qualification?","നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?",text,true,high,EDU_001
+Q089,Staff Nurse,Experience,"How many years of professional experience do you have in nursing?","നഴ്സിംഗ് മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?",number,true,high,EXP_001
+Q090,Staff Nurse,Skills,"Do you have professional experience in patient care?","രോഗി പരിചരണത്തിൽ നിങ്ങൾക്ക് പ്രൊഫഷണൽ പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q091,Staff Nurse,Skills,"Do you have experience working in an ICU environment?","ICU പരിതസ്ഥിതിയിൽ പ്രവർത്തിച്ച പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q092,Staff Nurse,Skills,"Do you have experience providing emergency care?","അടിയന്തര പരിചരണം നൽകുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q093,Staff Nurse,Skills,"Would you consider communication one of your professional strengths?","ആശയവിനിമയം നിങ്ങളുടെ പ്രൊഫഷണൽ ശക്തികളിൽ ഒന്നാണെന്ന് നിങ്ങൾ കരുതുന്നുണ്ടോ?",yes_no,true,medium,SKILL_001
+Q094,Staff Nurse,Location,"Where are you currently located, and are you available to work from the required location?","നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?",text,true,medium,LOC_001
+Q095,Staff Nurse,Salary,"What are your current and expected salary requirements?","നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?",range,false,medium,SAL_001
+Q096,Staff Nurse,Notice Period,"What is your current notice period, and when would you be available to join?","നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?",text,true,medium,NOTICE_001
+
+Q097,UI/UX Designer,Introduction,"Could you please introduce yourself and briefly describe your professional background?","ദയവായി സ്വയം പരിചയപ്പെടുത്തുകയും നിങ്ങളുടെ പ്രൊഫഷണൽ പശ്ചാത്തലത്തെക്കുറിച്ച് ചുരുക്കത്തിൽ വിവരിക്കുകയും ചെയ്യാമോ?",text,true,low,INTRO_001
+Q098,UI/UX Designer,Education,"What is your highest educational qualification?","നിങ്ങളുടെ ഏറ്റവും ഉയർന്ന വിദ്യാഭ്യാസ യോഗ്യത എന്താണ്?",text,true,high,EDU_001
+Q099,UI/UX Designer,Experience,"How many years of professional experience do you have in UI/UX design?","UI/UX ഡിസൈൻ മേഖലയിൽ നിങ്ങൾക്ക് എത്ര വർഷത്തെ പ്രൊഫഷണൽ പരിചയമുണ്ട്?",number,true,high,EXP_001
+Q100,UI/UX Designer,Skills,"Do you have professional experience using Figma?","Figma ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പ്രൊഫഷണൽ പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q101,UI/UX Designer,Skills,"Do you have experience using Adobe XD?","Adobe XD ഉപയോഗിക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q102,UI/UX Designer,Skills,"Do you have experience creating wireframes?","Wireframes തയ്യാറാക്കുന്നതിൽ നിങ്ങൾക്ക് പരിചയമുണ്ടോ?",yes_no,true,high,SKILL_001
+Q103,UI/UX Designer,Skills,"Do you have experience working with HTML and CSS?","HTML, CSS എന്നിവ ഉപയോഗിച്ച് പ്രവർത്തിച്ച പരിചയമുണ്ടോ?",yes_no,true,medium,SKILL_001
+Q104,UI/UX Designer,Location,"Where are you currently located, and are you available to work from the required location?","നിങ്ങൾ നിലവിൽ എവിടെയാണ് താമസിക്കുന്നത്, കൂടാതെ ആവശ്യമായ സ്ഥലത്ത് നിന്ന് ജോലി ചെയ്യാൻ നിങ്ങൾക്ക് സാധിക്കുമോ?",text,true,medium,LOC_001
+Q105,UI/UX Designer,Salary,"What are your current and expected salary requirements?","നിങ്ങളുടെ നിലവിലെ ശമ്പളവും പ്രതീക്ഷിക്കുന്ന ശമ്പളവും എത്രയാണ്?",range,false,medium,SAL_001
+Q106,UI/UX Designer,Notice Period,"What is your current notice period, and when would you be available to join?","നിങ്ങളുടെ നിലവിലെ നോട്ടീസ് കാലയളവ് എത്രയാണ്, നിങ്ങൾക്ക് എപ്പോൾ ജോലിയിൽ പ്രവേശിക്കാൻ കഴിയും?",text,true,medium,NOTICE_001
