@@ -1,0 +1,55 @@
+{
+  "schema_name": "Voice Transcript Schema",
+  "schema_version": "1.0",
+  "description": "Structured schema for storing voice screening transcript segments.",
+  "fields": {
+    "candidate_id": {
+      "type": "string",
+      "required": true,
+      "description": "Unique identifier assigned to the candidate.",
+      "example": "CAND_001"
+    },
+    "job_id": {
+      "type": "string",
+      "required": true,
+      "description": "Unique identifier assigned to the job.",
+      "example": "JOB_DS_001"
+    },
+    "question_id": {
+      "type": "string",
+      "required": true,
+      "description": "Unique identifier of the screening question.",
+      "example": "Q_001"
+    },
+    "timestamp": {
+      "type": "string",
+      "required": true,
+      "description": "Timestamp associated with the transcript segment.",
+      "format": "HH:MM:SS",
+      "example": "00:02:15"
+    },
+    "confidence_level": {
+      "type": "float",
+      "required": true,
+      "description": "Confidence score associated with the speech-to-text transcription.",
+      "range": "0.0-1.0",
+      "example": 0.94
+    },
+    "speaker": {
+      "type": "string",
+      "required": true,
+      "description": "Identifies the speaker of the transcript segment.",
+      "allowed_values": [
+        "candidate",
+        "interviewer"
+      ],
+      "example": "candidate"
+    },
+    "transcript_text": {
+      "type": "string",
+      "required": true,
+      "description": "Normalized text converted from the spoken voice interaction.",
+      "example": "I have two years of experience in Python."
+    }
+  }
+}

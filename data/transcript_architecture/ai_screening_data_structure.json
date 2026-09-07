@@ -1,0 +1,14 @@
+{
+  "schema_name": "AI Screening Data Structure",
+  "schema_version": "1.0",
+  "description": "Structured representation of voice screening interactions for AI processing.",
+  "screening_interaction": {
+    "candidate_id": "CAND_001",
+    "job_id": "JOB_DS_001",
+    "question_id": "Q_001",
+    "timestamp": "00:02:15",
+    "confidence_level": 0.94,
+    "speaker": "candidate",
+    "transcript_text": "I have two years of experience in Python."
+  }
+}
