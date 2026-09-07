@@ -15,6 +15,7 @@ from scoring.skill_matching import SkillMatcher
 from scoring.experience_relevance import ExperienceRelevanceScorer
 from scoring.education_relevance import education_relevance
 from scoring.semantic_matching import SemanticMatching
+from eligibility_engine import EligibilityEngine
 
 
 class BatchScorer:
@@ -24,6 +25,7 @@ class BatchScorer:
         self.experience_scorer = ExperienceRelevanceScorer()
         self.semantic_matcher = SemanticMatching()
         self.ats_scorer = ATSScorer()
+        self.eligibility_engine = EligibilityEngine()
 
     def load_json(self, file_path):
         """Load a JSON file."""
@@ -284,8 +286,34 @@ class BatchScorer:
             "experience": experience,
             "education": education,
             "projects": projects,
-            "certifications": certifications
+            "certifications": certifications,
+            "location": candidate.get("location"),
+            "availability": candidate.get("availability")
         }
+
+    def _extract_experience_years(self, experience):
+        """
+        Extract the highest experience duration in years
+        from the candidate experience entries.
+        """
+
+        highest_years = 0.0
+
+        for item in experience:
+            if not isinstance(item, str):
+                continue
+
+            match = re.search(
+                r"(\d+(?:\.\d+)?)\s*\+?\s*(?:years?|yrs?)",
+                item,
+                re.IGNORECASE
+            )
+
+            if match:
+                years = float(match.group(1))
+                highest_years = max(highest_years, years)
+
+        return highest_years
 
     def calculate_experience_match_score(self, candidate, jd):
         """
@@ -508,17 +536,32 @@ class BatchScorer:
             semantic_score
         )
 
-        return {
-            "candidate_name": candidate_name,
-            "job_role": role,
-            "overall_score": overall_score,
-            "breakdown": {
-                "skills": skill_score,
-                "experience": experience_score,
-                "education": education_score,
-                "semantic": semantic_score
-            }
-        }
+        ats_result = {
+    "candidate_name": candidate_name,
+    "job_role": role,
+    "overall_score": overall_score,
+
+    # Candidate information required by EligibilityEngine
+    "skills": scoring_candidate.get("skills", []),
+    "experience_years": self._extract_experience_years(
+        scoring_candidate.get("experience", [])
+    ),
+    "location": scoring_candidate.get("location"),
+    "availability": scoring_candidate.get("availability"),
+
+    "breakdown": {
+        "skills": skill_score,
+        "experience": experience_score,
+        "education": education_score,
+        "semantic": semantic_score
+    }
+}
+
+        eligibility_result = self.eligibility_engine.evaluate_candidate(
+            ats_result
+        )
+
+        return eligibility_result
 
     def score_all_candidates(self, candidate_dir, jd_dir):
         """
