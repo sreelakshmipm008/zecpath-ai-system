@@ -1,0 +1,90 @@
+{
+  "report_title": "AI Screening Report",
+  "candidate_information": {
+    "candidate_name": "Sample Python Candidate",
+    "job_role": "Python Developer"
+  },
+  "screening_summary": {
+    "key_answers": [
+      {
+        "question": "Could you please introduce yourself and briefly describe your professional background?",
+        "answer": "I am a Python developer with experience building backend applications and APIs."
+      },
+      {
+        "question": "What is your highest educational qualification?",
+        "answer": "I completed my Bachelor's degree in Computer Science."
+      },
+      {
+        "question": "How many years of professional experience do you have in Python development?",
+        "answer": "I have 3 years of professional experience in Python development."
+      },
+      {
+        "question": "Do you have professional experience with Python?",
+        "answer": "Yes, I have professional experience with Python."
+      },
+      {
+        "question": "Do you have experience working with Django?",
+        "answer": "Yes, I have experience working with Django."
+      },
+      {
+        "question": "Do you have experience working with Flask?",
+        "answer": "Yes, I have experience working with Flask."
+      },
+      {
+        "question": "Do you have experience working with SQL?",
+        "answer": "Yes, I have experience working with SQL."
+      },
+      {
+        "question": "Do you have experience using Git?",
+        "answer": "Yes, I use Git regularly."
+      },
+      {
+        "question": "Do you have experience developing or working with REST APIs?",
+        "answer": "Yes, I have experience developing REST APIs."
+      },
+      {
+        "question": "Do you have experience using Docker?",
+        "answer": "Yes, I have experience using Docker."
+      },
+      {
+        "question": "Where are you currently located, and are you available to work from the required location?",
+        "answer": "I am currently located in Kochi and can work from the required location."
+      },
+      {
+        "question": "What are your current and expected salary requirements?",
+        "answer": "My expected salary is 8 LPA."
+      },
+      {
+        "question": "What is your current notice period, and when would you be available to join?",
+        "answer": "I can join immediately."
+      }
+    ],
+    "strengths": [
+      "The answer is clear and sufficiently structured.",
+      "The answer directly addresses the question.",
+      "No obvious internal contradictions were detected.",
+      "The answer is understandable but provides limited detail."
+    ],
+    "risks": [
+      "The answer does not directly address the question."
+    ],
+    "missing_data": []
+  },
+  "screening_highlights": {
+    "salary_expectation": {
+      "value": "8 lpa"
+    },
+    "availability": "immediately",
+    "skill_confirmations": [
+      "python",
+      "sql",
+      "git",
+      "docker"
+    ]
+  },
+  "screening_evaluation": {
+    "total_questions": 13,
+    "answered_questions": 13,
+    "final_screening_score": 82.5
+  }
+}

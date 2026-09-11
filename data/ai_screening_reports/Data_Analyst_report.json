@@ -1,0 +1,87 @@
+{
+  "report_title": "AI Screening Report",
+  "candidate_information": {
+    "candidate_name": "Sample Data Analyst",
+    "job_role": "Data Analyst"
+  },
+  "screening_summary": {
+    "key_answers": [
+      {
+        "question": "Could you please introduce yourself and briefly describe your professional background?",
+        "answer": "I am a data analyst with experience working on reporting and business analysis."
+      },
+      {
+        "question": "What is your highest educational qualification?",
+        "answer": "I completed my Bachelor's degree in Statistics."
+      },
+      {
+        "question": "How many years of professional experience do you have in data analysis?",
+        "answer": "I have 2 years of professional experience in data analysis."
+      },
+      {
+        "question": "Do you have professional experience using Python for data analysis?",
+        "answer": "Yes, I use Python for data analysis."
+      },
+      {
+        "question": "Do you have experience working with SQL?",
+        "answer": "Yes, I have experience working with SQL."
+      },
+      {
+        "question": "Do you have experience using Power BI?",
+        "answer": "Yes, I have experience creating dashboards using Power BI."
+      },
+      {
+        "question": "Do you have experience using Excel for data analysis?",
+        "answer": "Yes, I have experience using Excel for data analysis."
+      },
+      {
+        "question": "Do you have experience using Pandas for data analysis?",
+        "answer": "Yes, I have experience using Pandas."
+      },
+      {
+        "question": "Do you have knowledge of statistics for data analysis?",
+        "answer": "Yes, I have a good understanding of statistics."
+      },
+      {
+        "question": "Where are you currently located, and are you available to work from the required location?",
+        "answer": "I am currently located in Kochi and am available to work from the required location."
+      },
+      {
+        "question": "What are your current and expected salary requirements?",
+        "answer": "My expected salary is 7 LPA."
+      },
+      {
+        "question": "What is your current notice period, and when would you be available to join?",
+        "answer": "I have a 30 days notice period."
+      }
+    ],
+    "strengths": [
+      "The answer is clear and sufficiently structured.",
+      "The answer directly addresses the question.",
+      "No obvious internal contradictions were detected."
+    ],
+    "risks": [
+      "The answer does not directly address the question."
+    ],
+    "missing_data": []
+  },
+  "screening_highlights": {
+    "salary_expectation": {
+      "value": "7 lpa"
+    },
+    "availability": "30 days notice",
+    "skill_confirmations": [
+      "data analysis",
+      "python",
+      "sql",
+      "power bi",
+      "excel",
+      "pandas"
+    ]
+  },
+  "screening_evaluation": {
+    "total_questions": 12,
+    "answered_questions": 12,
+    "final_screening_score": 85.1
+  }
+}
