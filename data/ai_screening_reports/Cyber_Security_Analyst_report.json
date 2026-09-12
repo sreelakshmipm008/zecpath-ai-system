@@ -1,0 +1,74 @@
+{
+  "report_title": "AI Screening Report",
+  "candidate_information": {
+    "candidate_name": "Sample Cyber Security Analyst Candidate",
+    "job_role": "Cyber Security Analyst"
+  },
+  "screening_summary": {
+    "key_answers": [
+      {
+        "question": "Could you please introduce yourself and briefly describe your professional background?",
+        "answer": "I am a Cyber Security Analyst with experience monitoring security events and supporting security operations."
+      },
+      {
+        "question": "What is your highest educational qualification?",
+        "answer": "I completed my Bachelor's degree in Computer Science."
+      },
+      {
+        "question": "How many years of professional experience do you have in cybersecurity?",
+        "answer": "I have 3 years of professional experience in cybersecurity."
+      },
+      {
+        "question": "Do you have professional experience working with SIEM systems?",
+        "answer": "Yes, I have professional experience working with SIEM systems for security monitoring."
+      },
+      {
+        "question": "Do you have experience in network security?",
+        "answer": "Yes, I have experience with network security monitoring and security controls."
+      },
+      {
+        "question": "Do you have experience using Python for cybersecurity-related tasks?",
+        "answer": "Yes, I have used Python for cybersecurity-related automation and analysis."
+      },
+      {
+        "question": "Do you have experience with ethical hacking?",
+        "answer": "Yes, I have experience with ethical hacking and basic penetration testing activities."
+      },
+      {
+        "question": "Where are you currently located, and are you available to work from the required location?",
+        "answer": "I am currently located in Kochi and can work from the required location."
+      },
+      {
+        "question": "What are your current and expected salary requirements?",
+        "answer": "My expected salary is 8 LPA."
+      },
+      {
+        "question": "What is your current notice period, and when would you be available to join?",
+        "answer": "I have a 30 days notice period."
+      }
+    ],
+    "strengths": [
+      "The answer is clear and sufficiently structured.",
+      "The answer directly addresses the question.",
+      "No obvious internal contradictions were detected."
+    ],
+    "risks": [
+      "The answer does not directly address the question."
+    ],
+    "missing_data": []
+  },
+  "screening_highlights": {
+    "salary_expectation": {
+      "value": "8 lpa"
+    },
+    "availability": "30 days notice",
+    "skill_confirmations": [
+      "python"
+    ]
+  },
+  "screening_evaluation": {
+    "total_questions": 10,
+    "answered_questions": 10,
+    "final_screening_score": 85.75
+  }
+}

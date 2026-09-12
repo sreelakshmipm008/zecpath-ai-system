@@ -1,0 +1,72 @@
+{
+  "report_title": "AI Screening Report",
+  "candidate_information": {
+    "candidate_name": "Sample Staff Nurse Candidate",
+    "job_role": "Staff Nurse"
+  },
+  "screening_summary": {
+    "key_answers": [
+      {
+        "question": "Could you please introduce yourself and briefly describe your professional background?",
+        "answer": "I am a staff nurse with experience providing patient care and supporting clinical operations."
+      },
+      {
+        "question": "What is your highest educational qualification?",
+        "answer": "I completed my Bachelor of Science in Nursing."
+      },
+      {
+        "question": "How many years of professional experience do you have in nursing?",
+        "answer": "I have 3 years of professional experience in nursing."
+      },
+      {
+        "question": "Do you have professional experience in patient care?",
+        "answer": "Yes, I have professional experience providing patient care."
+      },
+      {
+        "question": "Do you have experience working in an ICU environment?",
+        "answer": "Yes, I have experience working in an ICU environment."
+      },
+      {
+        "question": "Do you have experience providing emergency care?",
+        "answer": "Yes, I have experience providing emergency care and supporting emergency procedures."
+      },
+      {
+        "question": "Would you consider communication one of your professional strengths?",
+        "answer": "Yes, communication is one of my professional strengths when working with patients and healthcare teams."
+      },
+      {
+        "question": "Where are you currently located, and are you available to work from the required location?",
+        "answer": "I am currently located in Kochi and can work from the required location."
+      },
+      {
+        "question": "What are your current and expected salary requirements?",
+        "answer": "My expected salary is 5 LPA."
+      },
+      {
+        "question": "What is your current notice period, and when would you be available to join?",
+        "answer": "I have a 30 days notice period."
+      }
+    ],
+    "strengths": [
+      "The answer is clear and sufficiently structured.",
+      "The answer directly addresses the question.",
+      "No obvious internal contradictions were detected."
+    ],
+    "risks": [
+      "The answer does not directly address the question."
+    ],
+    "missing_data": []
+  },
+  "screening_highlights": {
+    "salary_expectation": {
+      "value": "5 lpa"
+    },
+    "availability": "30 days notice",
+    "skill_confirmations": []
+  },
+  "screening_evaluation": {
+    "total_questions": 10,
+    "answered_questions": 10,
+    "final_screening_score": 84.62
+  }
+}

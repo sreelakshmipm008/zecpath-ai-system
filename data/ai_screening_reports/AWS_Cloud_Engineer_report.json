@@ -1,0 +1,80 @@
+{
+  "report_title": "AI Screening Report",
+  "candidate_information": {
+    "candidate_name": "Sample AWS Cloud Engineer Candidate",
+    "job_role": "AWS Cloud Engineer"
+  },
+  "screening_summary": {
+    "key_answers": [
+      {
+        "question": "Could you please introduce yourself and briefly describe your professional background?",
+        "answer": "I am an AWS Cloud Engineer with experience managing cloud infrastructure, deployments, and automation."
+      },
+      {
+        "question": "What is your highest educational qualification?",
+        "answer": "I completed my Bachelor's degree in Computer Science."
+      },
+      {
+        "question": "How many years of professional experience do you have in cloud engineering?",
+        "answer": "I have 3 years of professional experience in cloud engineering."
+      },
+      {
+        "question": "Do you have professional experience working with AWS?",
+        "answer": "Yes, I have professional experience working with AWS cloud services."
+      },
+      {
+        "question": "Do you have experience working with Linux systems?",
+        "answer": "Yes, I have experience administering and working with Linux systems."
+      },
+      {
+        "question": "Do you have experience using Docker?",
+        "answer": "Yes, I have experience using Docker for application deployment and containerization."
+      },
+      {
+        "question": "Do you have experience with Terraform?",
+        "answer": "Yes, I have experience using Terraform for infrastructure automation."
+      },
+      {
+        "question": "Do you have experience working with Kubernetes?",
+        "answer": "Yes, I have experience working with Kubernetes for container orchestration."
+      },
+      {
+        "question": "Where are you currently located, and are you available to work from the required location?",
+        "answer": "I am currently located in Kochi and can work from the required location."
+      },
+      {
+        "question": "What are your current and expected salary requirements?",
+        "answer": "My expected salary is 9 LPA."
+      },
+      {
+        "question": "What is your current notice period, and when would you be available to join?",
+        "answer": "I have a 30 days notice period."
+      }
+    ],
+    "strengths": [
+      "The answer is clear and sufficiently structured.",
+      "The answer directly addresses the question.",
+      "No obvious internal contradictions were detected."
+    ],
+    "risks": [
+      "The answer does not directly address the question."
+    ],
+    "missing_data": []
+  },
+  "screening_highlights": {
+    "salary_expectation": {
+      "value": "9 lpa"
+    },
+    "availability": "30 days notice",
+    "skill_confirmations": [
+      "aws",
+      "docker",
+      "kubernetes"
+    ]
+  },
+  "screening_evaluation": {
+    "total_questions": 11,
+    "answered_questions": 11,
+    "final_screening_score": 86.59
+  }
+}

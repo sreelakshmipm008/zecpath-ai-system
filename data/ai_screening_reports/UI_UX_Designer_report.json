@@ -1,0 +1,72 @@
+{
+  "report_title": "AI Screening Report",
+  "candidate_information": {
+    "candidate_name": "Sample UI/UX Designer Candidate",
+    "job_role": "UI/UX Designer"
+  },
+  "screening_summary": {
+    "key_answers": [
+      {
+        "question": "Could you please introduce yourself and briefly describe your professional background?",
+        "answer": "I am a UI/UX designer with experience designing user interfaces and improving digital user experiences."
+      },
+      {
+        "question": "What is your highest educational qualification?",
+        "answer": "I completed my Bachelor's degree in Computer Science."
+      },
+      {
+        "question": "How many years of professional experience do you have in UI/UX design?",
+        "answer": "I have 2 years of professional experience in UI/UX design."
+      },
+      {
+        "question": "Do you have professional experience using Figma?",
+        "answer": "Yes, I have professional experience using Figma for interface design and prototyping."
+      },
+      {
+        "question": "Do you have experience using Adobe XD?",
+        "answer": "Yes, I have experience using Adobe XD for UI/UX design."
+      },
+      {
+        "question": "Do you have experience creating wireframes?",
+        "answer": "Yes, I have experience creating wireframes for web and mobile applications."
+      },
+      {
+        "question": "Do you have experience working with HTML and CSS?",
+        "answer": "Yes, I have basic experience working with HTML and CSS."
+      },
+      {
+        "question": "Where are you currently located, and are you available to work from the required location?",
+        "answer": "I am currently located in Kochi and can work from the required location."
+      },
+      {
+        "question": "What are your current and expected salary requirements?",
+        "answer": "My expected salary is 6 LPA."
+      },
+      {
+        "question": "What is your current notice period, and when would you be available to join?",
+        "answer": "I have a 30 days notice period."
+      }
+    ],
+    "strengths": [
+      "The answer is clear and sufficiently structured.",
+      "The answer directly addresses the question.",
+      "No obvious internal contradictions were detected."
+    ],
+    "risks": [
+      "The answer does not directly address the question."
+    ],
+    "missing_data": []
+  },
+  "screening_highlights": {
+    "salary_expectation": {
+      "value": "6 lpa"
+    },
+    "availability": "30 days notice",
+    "skill_confirmations": []
+  },
+  "screening_evaluation": {
+    "total_questions": 10,
+    "answered_questions": 10,
+    "final_screening_score": 86.12
+  }
+}

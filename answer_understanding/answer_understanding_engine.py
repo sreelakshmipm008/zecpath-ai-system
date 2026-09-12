@@ -49,30 +49,67 @@ class AnswerUnderstandingEngine:
     def extract_skills(answer: str) -> list[str]:
         """Extract commonly mentioned technical skills."""
         skill_patterns = [
-            "python",
-            "java",
-            "javascript",
-            "typescript",
-            "sql",
-            "excel",
-            "power bi",
-            "tableau",
-            "pandas",
-            "numpy",
-            "tensorflow",
-            "pytorch",
-            "aws",
-            "azure",
-            "gcp",
-            "docker",
-            "kubernetes",
-            "git",
-            "github",
-            "machine learning",
-            "deep learning",
-            "nlp",
-            "data analysis",
-        ]
+    # Programming and data
+    "python",
+    "java",
+    "javascript",
+    "typescript",
+    "sql",
+    "excel",
+    "power bi",
+    "tableau",
+    "pandas",
+    "numpy",
+    "tensorflow",
+    "pytorch",
+    "git",
+    "github",
+    "machine learning",
+    "deep learning",
+    "nlp",
+    "data analysis",
+
+    # Cloud and infrastructure
+    "aws",
+    "azure",
+    "gcp",
+    "docker",
+    "kubernetes",
+    "linux",
+    "terraform",
+
+    # Accounting
+    "tally",
+    "gst",
+
+    # Cyber security
+    "siem",
+    "network security",
+
+    # Digital marketing
+    "seo",
+    "sem",
+    "google analytics",
+
+    # Human resources
+    "recruitment",
+    "hrms",
+
+    # Sales
+    "crm",
+    "negotiation",
+    "lead generation",
+
+    # Healthcare
+    "patient care",
+    "icu",
+    "emergency care",
+
+    # UI/UX
+    "figma",
+    "adobe xd",
+    "wireframing",
+]
 
         normalized = answer.lower()
         found_skills = []

@@ -1,0 +1,72 @@
+{
+  "report_title": "AI Screening Report",
+  "candidate_information": {
+    "candidate_name": "Sample Sales Executive Candidate",
+    "job_role": "Sales Executive"
+  },
+  "screening_summary": {
+    "key_answers": [
+      {
+        "question": "Could you please introduce yourself and briefly describe your professional background?",
+        "answer": "I am a sales professional with experience in customer acquisition, lead generation, and relationship management."
+      },
+      {
+        "question": "What is your highest educational qualification?",
+        "answer": "I completed my Bachelor's degree in Business Administration."
+      },
+      {
+        "question": "How many years of professional experience do you have in sales?",
+        "answer": "I have 3 years of professional experience in sales."
+      },
+      {
+        "question": "Do you have professional experience using CRM systems?",
+        "answer": "Yes, I have professional experience using CRM systems to manage customer interactions and leads."
+      },
+      {
+        "question": "Do you have experience in negotiation?",
+        "answer": "Yes, I have experience negotiating with customers and handling sales discussions."
+      },
+      {
+        "question": "Do you have experience in lead generation?",
+        "answer": "Yes, I have experience in lead generation through multiple sales channels."
+      },
+      {
+        "question": "Do you have experience giving professional presentations?",
+        "answer": "Yes, I have experience giving professional sales presentations."
+      },
+      {
+        "question": "Where are you currently located, and are you available to work from the required location?",
+        "answer": "I am currently located in Kochi and can work from the required location."
+      },
+      {
+        "question": "What are your current and expected salary requirements?",
+        "answer": "My expected salary is 6 LPA."
+      },
+      {
+        "question": "What is your current notice period, and when would you be available to join?",
+        "answer": "I have a 30 days notice period."
+      }
+    ],
+    "strengths": [
+      "The answer is clear and sufficiently structured.",
+      "The answer directly addresses the question.",
+      "No obvious internal contradictions were detected."
+    ],
+    "risks": [
+      "The answer does not directly address the question."
+    ],
+    "missing_data": []
+  },
+  "screening_highlights": {
+    "salary_expectation": {
+      "value": "6 lpa"
+    },
+    "availability": "30 days notice",
+    "skill_confirmations": []
+  },
+  "screening_evaluation": {
+    "total_questions": 10,
+    "answered_questions": 10,
+    "final_screening_score": 87.12
+  }
+}

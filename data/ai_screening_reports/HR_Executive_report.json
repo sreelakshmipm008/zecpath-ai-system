@@ -1,0 +1,74 @@
+{
+  "report_title": "AI Screening Report",
+  "candidate_information": {
+    "candidate_name": "Sample HR Executive Candidate",
+    "job_role": "HR Executive"
+  },
+  "screening_summary": {
+    "key_answers": [
+      {
+        "question": "Could you please introduce yourself and briefly describe your professional background?",
+        "answer": "I am an HR professional with experience supporting recruitment, employee records, and HR operations."
+      },
+      {
+        "question": "What is your highest educational qualification?",
+        "answer": "I completed my Bachelor's degree in Business Administration."
+      },
+      {
+        "question": "How many years of professional experience do you have in human resources?",
+        "answer": "I have 2 years of professional experience in human resources."
+      },
+      {
+        "question": "Do you have professional experience in recruitment?",
+        "answer": "Yes, I have professional experience in recruitment and candidate screening."
+      },
+      {
+        "question": "Do you have experience working with HRMS systems?",
+        "answer": "Yes, I have experience working with HRMS systems."
+      },
+      {
+        "question": "Do you have experience using Excel for HR-related work?",
+        "answer": "Yes, I use Excel for HR reporting and employee-related work."
+      },
+      {
+        "question": "Would you consider communication one of your professional strengths?",
+        "answer": "Yes, communication is one of my professional strengths."
+      },
+      {
+        "question": "Where are you currently located, and are you available to work from the required location?",
+        "answer": "I am currently located in Kochi and can work from the required location."
+      },
+      {
+        "question": "What are your current and expected salary requirements?",
+        "answer": "My expected salary is 6 LPA."
+      },
+      {
+        "question": "What is your current notice period, and when would you be available to join?",
+        "answer": "I have a 30 days notice period."
+      }
+    ],
+    "strengths": [
+      "The answer is clear and sufficiently structured.",
+      "The answer directly addresses the question.",
+      "No obvious internal contradictions were detected."
+    ],
+    "risks": [
+      "The answer does not directly address the question."
+    ],
+    "missing_data": []
+  },
+  "screening_highlights": {
+    "salary_expectation": {
+      "value": "6 lpa"
+    },
+    "availability": "30 days notice",
+    "skill_confirmations": [
+      "excel"
+    ]
+  },
+  "screening_evaluation": {
+    "total_questions": 10,
+    "answered_questions": 10,
+    "final_screening_score": 87.25
+  }
+}
