@@ -63,6 +63,36 @@ def detect_silence(
 
     return silent_regions
 
+def detect_background_noise(
+    audio_path: str | Path,
+    threshold: float = 0.05,
+) -> bool:
+    """
+    Detect whether an audio file contains sustained background noise.
+
+    Returns True when the average non-silent audio energy
+    is above the configured threshold.
+    """
+
+    sample_rate, audio = wavfile.read(str(audio_path))
+
+    was_integer = np.issubdtype(audio.dtype, np.integer)
+    max_value = np.iinfo(audio.dtype).max if was_integer else 1.0
+
+    audio = audio.astype(np.float32)
+
+    if audio.ndim == 2:
+        audio = audio.mean(axis=1)
+
+    if was_integer:
+        audio /= max_value
+
+    if len(audio) == 0:
+        return False
+
+    rms = float(np.sqrt(np.mean(audio**2)))
+
+    return rms > threshold
 
 class SpeechToTextService:
     """Convert speech audio into text using Faster-Whisper."""
@@ -86,7 +116,7 @@ class SpeechToTextService:
     def transcribe(
         self,
         audio: str | Path,
-        language: str = "en",
+        language: str | None = None,
         vad_filter: bool = False,
     ) -> str:
         """

@@ -8,6 +8,7 @@ import re
 from typing import Any
 
 from .intent_classifier import IntentClassifier
+from utils.ai_error_handler import AIErrorHandler
 
 
 class AnswerUnderstandingEngine:
@@ -15,6 +16,7 @@ class AnswerUnderstandingEngine:
 
     def __init__(self) -> None:
         self.intent_classifier = IntentClassifier()
+        self.error_handler = AIErrorHandler()
 
     def understand(
         self,
@@ -28,6 +30,24 @@ class AnswerUnderstandingEngine:
             raise TypeError("Answer must be a string.")
 
         answer = answer.strip()
+
+        if not answer:
+            error_result = self.error_handler.handle_missing_answer()
+
+            return {
+                "answer": answer,
+                "intent": "missing",
+                "skills": [],
+                "experience": None,
+                "availability": None,
+                "salary_expectation": None,
+                "error_handling": {
+                    "status": error_result.status,
+                    "action": error_result.action,
+                    "message": error_result.message,
+                    "retry_allowed": error_result.retry_allowed,
+                },
+            }
 
         intent = self.intent_classifier.classify(
             answer=answer,
