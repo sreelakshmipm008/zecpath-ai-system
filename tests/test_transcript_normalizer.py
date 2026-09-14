@@ -34,7 +34,8 @@ def test_empty_filler_transcript():
 def test_detects_silence_in_audio_fixture():
     audio_path = (
         Path(__file__).resolve().parents[4]
-        / "day24"
+        / "day 24"
+        / "sample audio"
         / "silence_speech.wav"
     )
 

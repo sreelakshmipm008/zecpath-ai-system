@@ -63,12 +63,14 @@
     },
     "availability": "30 days notice",
     "skill_confirmations": [
+      "siem",
+      "network security",
       "python"
     ]
   },
   "screening_evaluation": {
     "total_questions": 10,
     "answered_questions": 10,
-    "final_screening_score": 85.75
+    "final_screening_score": 86.0
   }
 }

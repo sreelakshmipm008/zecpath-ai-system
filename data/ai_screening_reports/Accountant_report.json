@@ -63,12 +63,14 @@
     },
     "availability": "30 days notice",
     "skill_confirmations": [
+      "tally",
+      "gst",
       "excel"
     ]
   },
   "screening_evaluation": {
     "total_questions": 10,
     "answered_questions": 10,
-    "final_screening_score": 84.75
+    "final_screening_score": 85.0
   }
 }

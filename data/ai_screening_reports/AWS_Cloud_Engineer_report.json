@@ -68,13 +68,15 @@
     "availability": "30 days notice",
     "skill_confirmations": [
       "aws",
+      "linux",
       "docker",
+      "terraform",
       "kubernetes"
     ]
   },
   "screening_evaluation": {
     "total_questions": 11,
     "answered_questions": 11,
-    "final_screening_score": 86.59
+    "final_screening_score": 86.82
   }
 }

@@ -62,11 +62,15 @@
       "value": "5 lpa"
     },
     "availability": "30 days notice",
-    "skill_confirmations": []
+    "skill_confirmations": [
+      "patient care",
+      "icu",
+      "emergency care"
+    ]
   },
   "screening_evaluation": {
     "total_questions": 10,
     "answered_questions": 10,
-    "final_screening_score": 84.62
+    "final_screening_score": 85.12
   }
 }

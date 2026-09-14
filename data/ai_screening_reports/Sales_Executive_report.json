@@ -62,11 +62,14 @@
       "value": "6 lpa"
     },
     "availability": "30 days notice",
-    "skill_confirmations": []
+    "skill_confirmations": [
+      "lead generation",
+      "crm"
+    ]
   },
   "screening_evaluation": {
     "total_questions": 10,
     "answered_questions": 10,
-    "final_screening_score": 87.12
+    "final_screening_score": 87.5
   }
 }
