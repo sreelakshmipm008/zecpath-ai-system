@@ -31,13 +31,21 @@ def test_empty_filler_transcript():
     text = "um uh hmm"
     assert normalize_transcript(text) == ""
 
-def test_detects_silence_in_audio_fixture():
-    audio_path = (
-        Path(__file__).resolve().parents[4]
-        / "day 24"
-        / "sample audio"
-        / "silence_speech.wav"
-    )
+def test_detects_silence_in_audio_fixture(tmp_path):
+    from scipy.io import wavfile
+    import numpy as np
+
+    sample_rate = 44_100
+    duration = 5.28
+    audio = np.zeros(int(sample_rate * duration), dtype=np.float32)
+
+    # Create non-silent speech-like signal for the first 2.5 seconds.
+    speech_samples = int(sample_rate * 2.5)
+    time = np.arange(speech_samples) / sample_rate
+    audio[:speech_samples] = 0.1 * np.sin(2 * np.pi * 440 * time)
+
+    audio_path = tmp_path / "silence_speech.wav"
+    wavfile.write(audio_path, sample_rate, audio)
 
     silent_regions = detect_silence(
         audio_path,

@@ -499,3 +499,254 @@ class CommunicationConfidenceAnalyzer:
             "level": level,
             "signals_used": len(scores),
         }
+
+    def detect_long_pauses(
+        self,
+        pause_durations: list[float],
+        threshold_seconds: float,
+    ) -> dict[str, Any]:
+        """
+        Detect long pauses in a candidate's spoken response.
+
+        Parameters
+        ----------
+        pause_durations:
+            List of pause durations in seconds.
+
+        threshold_seconds:
+            Duration above which a pause is considered long.
+
+        Returns
+        -------
+        dict[str, Any]
+            Long-pause detection results.
+        """
+
+        if not isinstance(pause_durations, list):
+            raise TypeError("pause_durations must be a list.")
+
+        if not isinstance(threshold_seconds, (int, float)):
+            raise TypeError("threshold_seconds must be a number.")
+
+        if threshold_seconds < 0:
+            raise ValueError("threshold_seconds cannot be negative.")
+
+        if any(
+            not isinstance(duration, (int, float))
+            for duration in pause_durations
+        ):
+            raise TypeError(
+                "Each pause duration must be a number."
+            )
+
+        if any(duration < 0 for duration in pause_durations):
+            raise ValueError(
+                "Pause durations cannot be negative."
+            )
+
+        long_pauses = [
+            round(float(duration), 2)
+            for duration in pause_durations
+            if duration >= threshold_seconds
+        ]
+
+        total_pauses = len(pause_durations)
+        long_pause_count = len(long_pauses)
+
+        if long_pause_count == 0:
+            score = 100.0
+        elif total_pauses == 0:
+            score = 100.0
+        else:
+            long_pause_rate = long_pause_count / total_pauses
+
+            if long_pause_rate <= 0.25:
+                score = 85.0
+            elif long_pause_rate <= 0.50:
+                score = 65.0
+            elif long_pause_rate <= 0.75:
+                score = 45.0
+            else:
+                score = 30.0
+
+        return {
+            "detected": long_pause_count > 0,
+            "count": long_pause_count,
+            "pauses": long_pauses,
+            "threshold_seconds": float(threshold_seconds),
+            "total_pauses": total_pauses,
+            "score": self._normalize_score(score),
+        }
+
+    def measure_stress_indicators(
+        self,
+        hesitation_count: int,
+        uncertainty_count: int,
+        contradiction_count: int,
+        negative_sentiment_score: float,
+    ) -> dict[str, Any]:
+        """
+        Measure observable stress-related communication indicators.
+
+        The method evaluates hesitation, uncertainty, contradictions,
+        and negative sentiment signals present in a response.
+
+        This is an observable communication indicator and does not
+        determine a candidate's psychological or medical state.
+        """
+
+        if not isinstance(hesitation_count, int):
+            raise TypeError("hesitation_count must be an integer.")
+
+        if not isinstance(uncertainty_count, int):
+            raise TypeError("uncertainty_count must be an integer.")
+
+        if not isinstance(contradiction_count, int):
+            raise TypeError("contradiction_count must be an integer.")
+
+        if not isinstance(negative_sentiment_score, (int, float)):
+            raise TypeError(
+                "negative_sentiment_score must be a number."
+            )
+
+        if hesitation_count < 0:
+            raise ValueError(
+                "hesitation_count cannot be negative."
+            )
+
+        if uncertainty_count < 0:
+            raise ValueError(
+                "uncertainty_count cannot be negative."
+            )
+
+        if contradiction_count < 0:
+            raise ValueError(
+                "contradiction_count cannot be negative."
+            )
+
+        negative_sentiment_score = max(
+            0.0,
+            min(1.0, float(negative_sentiment_score)),
+        )
+
+        hesitation_signal = min(hesitation_count / 5.0, 1.0)
+        uncertainty_signal = min(uncertainty_count / 5.0, 1.0)
+        contradiction_signal = min(contradiction_count / 3.0, 1.0)
+
+        stress_score = (
+            hesitation_signal * 0.30
+            + uncertainty_signal * 0.25
+            + contradiction_signal * 0.20
+            + negative_sentiment_score * 0.25
+        )
+
+        stress_score = round(stress_score * 100, 2)
+
+        if stress_score < 25:
+            level = "low"
+        elif stress_score < 50:
+            level = "moderate"
+        elif stress_score < 75:
+            level = "high"
+        else:
+            level = "very_high"
+
+        return {
+            "stress_score": stress_score,
+            "stress_level": level,
+            "signals": {
+                "hesitation_count": hesitation_count,
+                "uncertainty_count": uncertainty_count,
+                "contradiction_count": contradiction_count,
+                "negative_sentiment_score": round(
+                    negative_sentiment_score,
+                    2,
+                ),
+            },
+        }
+
+    def generate_behavioral_confidence_score(
+        self,
+        hesitation_score: float,
+        uncertainty_score: float,
+        contradiction_score: float,
+        stress_score: float,
+        sentiment_score: float,
+    ) -> dict[str, Any]:
+        """
+        Generate an observable behavioral confidence score.
+
+        Higher hesitation, uncertainty, contradiction, stress, and
+        negative sentiment signals reduce the confidence score.
+
+        This score represents observable communication signals and
+        does not determine a candidate's psychological state.
+        """
+
+        scores = [
+            hesitation_score,
+            uncertainty_score,
+            contradiction_score,
+        ]
+
+        for score in scores:
+            if not isinstance(score, (int, float)):
+                raise TypeError(
+                    "Behavioral signal scores must be numbers."
+                )
+
+            if not 0 <= score <= 100:
+                raise ValueError(
+                    "Behavioral signal scores must be between 0 and 100."
+                )
+
+        if not isinstance(stress_score, (int, float)):
+            raise TypeError("stress_score must be a number.")
+
+        if not 0 <= stress_score <= 100:
+            raise ValueError(
+                "stress_score must be between 0 and 100."
+            )
+
+        if not isinstance(sentiment_score, (int, float)):
+            raise TypeError("sentiment_score must be a number.")
+
+        if not -1 <= sentiment_score <= 1:
+            raise ValueError(
+                "sentiment_score must be between -1 and 1."
+            )
+
+        sentiment_confidence = (
+            (float(sentiment_score) + 1.0) / 2.0
+        ) * 100.0
+
+        behavioral_confidence = (
+            float(hesitation_score) * 0.20
+            + float(uncertainty_score) * 0.20
+            + float(contradiction_score) * 0.20
+            + (100.0 - float(stress_score)) * 0.25
+            + sentiment_confidence * 0.15
+        )
+
+        behavioral_confidence = self._normalize_score(
+            behavioral_confidence
+        )
+
+        if behavioral_confidence >= 80:
+            level = "high"
+        elif behavioral_confidence >= 60:
+            level = "moderate"
+        else:
+            level = "low"
+
+        return {
+            "score": behavioral_confidence,
+            "level": level,
+            "signals_used": [
+                "hesitation",
+                "uncertainty",
+                "contradictions",
+                "stress",
+                "sentiment",
+            ],
+        }
