@@ -24,6 +24,7 @@ class InterviewResponse:
     question_id: str
     response: str
     response_type: str = "text"
+    question: Optional[str] = None
     category: Optional[str] = None
     follow_up_eligible: bool = False
     follow_up_reason: Optional[str] = None
@@ -69,6 +70,7 @@ class InterviewState:
         question_id: str,
         response: str,
         response_type: str = "text",
+        question: Optional[str] = None,
         follow_up_eligible: bool = False,
         follow_up_reason: Optional[str] = None,
         category: Optional[HRInterviewCategory | str] = None,
@@ -84,6 +86,7 @@ class InterviewState:
             question_id=question_id,
             response=response.strip(),
             response_type=response_type,
+            question=question,
             category=category_value,
             follow_up_eligible=follow_up_eligible,
             follow_up_reason=follow_up_reason,
@@ -155,6 +158,7 @@ class InterviewState:
                     "question_id": response.question_id,
                     "response": response.response,
                     "response_type": response.response_type,
+                    "question": response.question,
                     "category": response.category,
                     "follow_up_eligible": response.follow_up_eligible,
                     "follow_up_reason": response.follow_up_reason,
