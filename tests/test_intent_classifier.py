@@ -93,4 +93,31 @@ def test_non_string_answer_raises_type_error():
         classifier.classify(
             None,
             "Do you have Python experience?"
-        )   
+        )
+
+
+def test_shared_word_does_not_make_unrelated_answer_on_topic():
+    classifier = IntentClassifier()
+
+    assert classifier.classify(
+        "My experience was watching a movie.",
+        "Tell me about your experience with data analysis.",
+    ) == "off_topic"
+
+
+def test_relevant_experience_answer_is_not_marked_off_topic():
+    classifier = IntentClassifier()
+
+    assert classifier.classify(
+        "I have two years of experience.",
+        "Tell me about your professional background.",
+    ) == "on_topic"
+
+
+def test_duration_alone_does_not_answer_specific_skill_question():
+    classifier = IntentClassifier()
+
+    assert classifier.classify(
+        "I have two years of experience.",
+        "Tell me about your experience with data analysis.",
+    ) == "off_topic"

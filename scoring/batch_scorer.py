@@ -14,7 +14,6 @@ from scoring.ats_score import ATSScorer
 from scoring.skill_matching import SkillMatcher
 from scoring.experience_relevance import ExperienceRelevanceScorer
 from scoring.education_relevance import education_relevance
-from scoring.semantic_matching import SemanticMatching
 from eligibility_engine import EligibilityEngine
 
 
@@ -23,8 +22,8 @@ class BatchScorer:
     def __init__(self):
         self.skill_matcher = SkillMatcher()
         self.experience_scorer = ExperienceRelevanceScorer()
-        self.semantic_matcher = SemanticMatching()
         self.ats_scorer = ATSScorer()
+        self.semantic_matcher = self.ats_scorer.semantic_matcher
         self.eligibility_engine = EligibilityEngine()
 
     def load_json(self, file_path):

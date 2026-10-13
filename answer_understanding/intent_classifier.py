@@ -175,7 +175,22 @@ class IntentClassifier:
         if not question_words:
             return False
 
-        if question_words.intersection(answer_words):
+        overlapping_words = question_words.intersection(answer_words)
+
+        # Generic words alone should not establish answer relevance.
+        generic_words = {
+            "experience",
+            "professional",
+            "background",
+            "work",
+            "worked",
+            "years",
+            "year",
+        }
+
+        meaningful_overlap = overlapping_words - generic_words
+
+        if meaningful_overlap:
             return False
 
         for terms in cls.TERM_GROUPS.values():
@@ -190,6 +205,44 @@ class IntentClassifier:
             )
 
             if question_has_group and answer_has_group:
+                return False
+
+        # Detect answers that provide only a duration of experience.
+        has_experience_duration = bool(
+            re.search(
+                r"\b(?:\d+(?:\.\d+)?|one|two|three|four|five|six|seven|eight|nine|ten)\s*(?:years?|yrs?|months?|mos?)\b",
+                answer_normalized,
+            )
+        )
+
+        if has_experience_duration:
+            # A duration alone does not answer a question about a
+            # specific skill or domain.
+            asks_about_specific_experience = bool(
+                re.search(
+                    r"\bexperience\s+(?:with|in|using|on)\s+\w+",
+                    question_normalized,
+                )
+            )
+
+            if asks_about_specific_experience:
+                return True
+
+            # A duration can answer a general background question.
+            experience_question_terms = {
+                "experience",
+                "background",
+                "career",
+                "professional",
+                "work history",
+            }
+
+            has_experience_question = any(
+                term in question_normalized
+                for term in experience_question_terms
+            )
+
+            if has_experience_question:
                 return False
 
         return True
