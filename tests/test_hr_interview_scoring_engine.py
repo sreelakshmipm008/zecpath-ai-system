@@ -248,6 +248,7 @@ def test_score_interview_state():
         experience_level="fresher",
     )
 
+    state.grant_consent()
     state.record_response(
         question_id="q1",
         question="Tell me about yourself.",

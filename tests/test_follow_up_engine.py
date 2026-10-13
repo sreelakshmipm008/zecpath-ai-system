@@ -89,6 +89,7 @@ def test_conversation_context_uses_interview_state():
 
     state = create_state()
     state.set_question("q_001", 1, "introduction")
+    state.grant_consent()
     state.record_response(
         question_id="q_001",
         response="I am a data analyst.",
@@ -106,6 +107,7 @@ def test_repetitive_question_prevents_follow_up():
     engine = FollowUpEngine()
 
     state = create_state()
+    state.grant_consent()
     state.record_response(
         question_id="q_001",
         response="I am a data analyst.",
@@ -125,6 +127,7 @@ def test_new_question_allows_follow_up():
     engine = FollowUpEngine()
 
     state = create_state()
+    state.grant_consent()
     state.record_response(
         question_id="q_001",
         response="I am a data analyst.",
@@ -155,4 +158,4 @@ def test_follow_up_instruction_for_confident_response():
     )
 
     assert result["follow_up_type"] == "scenario_based"
-    assert "scenario-based" in result["instruction"].lower()        
+    assert "scenario-based" in result["instruction"].lower()

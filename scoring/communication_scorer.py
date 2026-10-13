@@ -26,12 +26,12 @@ class CommunicationScorer:
 
     # Component weights must total 100.
     WEIGHTS = {
-        "fluency": 20,
-        "grammar_quality": 20,
-        "vocabulary_range": 15,
-        "clarity": 20,
-        "filler_words": 10,
-        "answer_structure": 15,
+        "fluency": 10,
+        "grammar_quality": 10,
+        "vocabulary_range": 5,
+        "clarity": 25,
+        "filler_words": 5,
+        "answer_structure": 45,
     }
 
     FILLER_WORDS = {
@@ -201,58 +201,10 @@ class CommunicationScorer:
         word_count: int,
         sentence_count: int
     ) -> float:
-        """
-        Measure sentence continuity.
-
-        The score considers:
-        - reasonable sentence length
-        - sentence completeness
-        - excessive fragmentation
-        - answer continuity
-
-        The result is normalized to 0-100.
-        """
-
-        if word_count == 0:
+        """Return a neutral score pending validated fluency measures."""
+        if word_count == 0 or sentence_count == 0:
             return 0.0
-
-        if sentence_count == 0:
-            return 0.0
-
-        average_sentence_length = word_count / sentence_count
-
-        # Reasonable conversational sentence length.
-        if 8 <= average_sentence_length <= 22:
-            length_score = 100
-        elif 5 <= average_sentence_length < 8:
-            length_score = 80
-        elif 22 < average_sentence_length <= 30:
-            length_score = 80
-        elif 3 <= average_sentence_length < 5:
-            length_score = 60
-        else:
-            length_score = 45
-
-        # Penalize very short fragmented sentences.
-        short_sentences = sum(
-            1 for sentence in sentences
-            if len(self._tokenize_words(sentence)) < 3
-        )
-
-        fragmentation_rate = short_sentences / sentence_count
-
-        fragmentation_penalty = min(
-            30,
-            fragmentation_rate * 60
-        )
-
-        score = length_score - fragmentation_penalty
-
-        return round(self._clamp(score), 2)
-
-    # ---------------------------------------------------------
-    # 2. Grammar Quality
-    # ---------------------------------------------------------
+        return 75.0
 
     def _grammar_score(
         self,
@@ -291,38 +243,10 @@ class CommunicationScorer:
         words: List[str],
         word_count: int
     ) -> float:
-        """
-        Measure vocabulary range using lexical diversity.
-
-        Type-token ratio is calculated using a minimum analysis
-        window to reduce bias from very short/long answers.
-        """
-
+        """Avoid using lexical diversity as an unvalidated hiring proxy."""
         if word_count == 0:
             return 0.0
-
-        unique_words = len(set(words))
-
-        # Use a bounded word count so answer length does not
-        # dominate the score.
-        analysis_count = min(word_count, 100)
-
-        bounded_words = words[:analysis_count]
-
-        unique_bounded_words = len(set(bounded_words))
-
-        lexical_diversity = (
-            unique_bounded_words / analysis_count
-        )
-
-        # Normalize typical conversational lexical diversity.
-        score = ((lexical_diversity - 0.20) / 0.60) * 100
-
-        return round(self._clamp(score), 2)
-
-    # ---------------------------------------------------------
-    # 4. Clarity of Explanation
-    # ---------------------------------------------------------
+        return 70.0
 
     def _clarity_score(
         self,
@@ -331,54 +255,10 @@ class CommunicationScorer:
         word_count: int,
         sentence_count: int
     ) -> float:
-        """
-        Measure clarity using:
-        - reasonable sentence length
-        - sufficient explanation
-        - excessive sentence complexity penalty
-        """
-
-        if word_count == 0:
+        """Use a neutral score until clarity is measured with validated evidence."""
+        if word_count == 0 or sentence_count == 0:
             return 0.0
-
-        if sentence_count == 0:
-            return 0.0
-
-        average_sentence_length = word_count / sentence_count
-
-        if 8 <= average_sentence_length <= 20:
-            sentence_score = 100
-        elif 5 <= average_sentence_length < 8:
-            sentence_score = 80
-        elif 20 < average_sentence_length <= 28:
-            sentence_score = 80
-        elif average_sentence_length > 28:
-            sentence_score = 60
-        else:
-            sentence_score = 55
-
-        # Explanation depth.
-        if word_count >= 80:
-            explanation_score = 100
-        elif word_count >= 50:
-            explanation_score = 90
-        elif word_count >= 25:
-            explanation_score = 75
-        elif word_count >= 10:
-            explanation_score = 60
-        else:
-            explanation_score = 45
-
-        score = (
-            sentence_score * 0.60
-            + explanation_score * 0.40
-        )
-
-        return round(self._clamp(score), 2)
-
-    # ---------------------------------------------------------
-    # 5. Filler Words
-    # ---------------------------------------------------------
+        return 70.0
 
     def _filler_word_score(
         self,
@@ -423,19 +303,9 @@ class CommunicationScorer:
             filler_count / word_count
         ) * 100
 
-        # Lower filler rate = better communication.
-        if filler_rate <= 1:
-            score = 100
-        elif filler_rate <= 2:
-            score = 90
-        elif filler_rate <= 4:
-            score = 75
-        elif filler_rate <= 6:
-            score = 60
-        elif filler_rate <= 8:
-            score = 45
-        else:
-            score = 30
+        # Filler words are reported for review but are not used
+        # as an automated candidate-ranking signal.
+        score = 70.0
 
         return {
             "score": round(self._clamp(score), 2),
@@ -454,45 +324,10 @@ class CommunicationScorer:
         sentences: List[str],
         word_count: int
     ) -> float:
-        """
-        Measure organization and logical answer structure.
-
-        Structure indicators include:
-        - multiple sentences
-        - logical transition markers
-        - explanation length
-        """
-
+        """Avoid using sentence count and transition words as hiring proxies."""
         if word_count == 0:
             return 0.0
-
-        score = 45.0
-
-        if len(sentences) >= 2:
-            score += 20
-
-        if len(sentences) >= 4:
-            score += 10
-
-        marker_count = 0
-
-        for marker in self.STRUCTURE_MARKERS:
-            if re.search(
-                r"\b" + re.escape(marker) + r"\b",
-                text
-            ):
-                marker_count += 1
-
-        score += min(marker_count * 5, 20)
-
-        if word_count >= 25:
-            score += 5
-
-        return round(self._clamp(score), 2)
-
-    # ---------------------------------------------------------
-    # Final Score
-    # ---------------------------------------------------------
+        return 70.0
 
     def _calculate_final_score(
         self,

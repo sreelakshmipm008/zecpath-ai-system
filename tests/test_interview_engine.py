@@ -29,6 +29,7 @@ def test_set_question():
 def test_record_response():
     state = InterviewState(session_id="SESSION001")
 
+    state.grant_consent()
     response = state.record_response(
         question_id="Q001",
         response="I am a Python developer.",
@@ -46,6 +47,7 @@ def test_record_response():
 def test_follow_up_eligibility():
     state = InterviewState(session_id="SESSION001")
 
+    state.grant_consent()
     state.record_response(
         question_id="Q001",
         response="I have experience with Python.",
@@ -59,6 +61,7 @@ def test_follow_up_eligibility():
 def test_non_follow_up_response():
     state = InterviewState(session_id="SESSION001")
 
+    state.grant_consent()
     state.record_response(
         question_id="Q002",
         response="Yes.",
@@ -77,6 +80,7 @@ def test_state_serialization():
     )
 
     state.set_question("Q001", 0)
+    state.grant_consent()
     state.record_response(
         question_id="Q001",
         response="I have five years of experience.",
@@ -155,6 +159,7 @@ def test_response_inherits_current_hr_category():
 
     state.set_category(HRInterviewCategory.CAREER_JOURNEY)
 
+    state.grant_consent()
     response = state.record_response(
         question_id="Q002",
         response="I started my career as an intern.",
@@ -166,6 +171,7 @@ def test_response_inherits_current_hr_category():
 def test_response_can_set_explicit_category():
     state = InterviewState(session_id="SESSION001")
 
+    state.grant_consent()
     response = state.record_response(
         question_id="Q003",
         response="I work well with teams.",
@@ -188,6 +194,7 @@ def test_category_persisted_in_state():
         category=HRInterviewCategory.SELF_INTRODUCTION,
     )
 
+    state.grant_consent()
     state.record_response(
         question_id="Q001",
         response="I am a Python developer.",
