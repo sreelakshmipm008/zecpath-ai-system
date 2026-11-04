@@ -1,0 +1,91 @@
+﻿{
+  "version": "1.0",
+  "description": "Role-based technical interview question bank for Day 46",
+  "experience_bands": {
+    "0-2": {"label": "Entry Level", "difficulty": "basic"},
+    "3-5": {"label": "Intermediate", "difficulty": "intermediate"},
+    "5+": {"label": "Senior Level", "difficulty": "advanced"}
+  },
+  "roles": {
+    "Python Developer": {
+      "skill_domains": ["Python", "OOP", "Data Structures", "APIs", "Databases"],
+      "questions": {
+        "0-2": [
+          {"id": "PY-001", "type": "conceptual", "difficulty": "basic", "domain": "Python", "question": "Explain the difference between a list, tuple and set in Python.", "expected_points": ["Mutability", "Ordering", "Uniqueness", "Use cases"]},
+          {"id": "PY-002", "type": "practical", "difficulty": "basic", "domain": "Data Structures", "question": "Write a Python function to find duplicate elements in a list.", "expected_points": ["Correct iteration", "Set or dictionary usage", "Duplicate handling", "Time complexity"]},
+          {"id": "PY-003", "type": "scenario", "difficulty": "basic", "domain": "Python", "question": "A Python script crashes when a user provides an empty input. How would you investigate and prevent this?", "expected_points": ["Reproduce error", "Input validation", "Exception handling", "Testing"]}
+        ],
+        "3-5": [
+          {"id": "PY-004", "type": "conceptual", "difficulty": "intermediate", "domain": "OOP", "question": "Explain inheritance, composition and polymorphism, and when you would choose each.", "expected_points": ["Accurate definitions", "Differences", "Design trade-offs", "Practical examples"]},
+          {"id": "PY-005", "type": "practical", "difficulty": "intermediate", "domain": "APIs", "question": "Design a Python function that consumes a REST API with timeout handling and retries.", "expected_points": ["HTTP request handling", "Timeouts", "Retry strategy", "Error handling"]},
+          {"id": "PY-006", "type": "scenario", "difficulty": "intermediate", "domain": "Databases", "question": "A Python application becomes slow when processing thousands of database records. How would you diagnose and improve it?", "expected_points": ["Profiling", "Query optimization", "Batch processing", "Memory management"]}
+        ],
+        "5+": [
+          {"id": "PY-007", "type": "conceptual", "difficulty": "advanced", "domain": "Python", "question": "Explain Python concurrency options and the trade-offs between threading, multiprocessing and asyncio.", "expected_points": ["GIL considerations", "I/O-bound versus CPU-bound work", "Concurrency models", "Trade-offs"]},
+          {"id": "PY-008", "type": "practical", "difficulty": "advanced", "domain": "System Design", "question": "Design a scalable Python service that processes background jobs with retries and failure recovery.", "expected_points": ["Queue design", "Worker architecture", "Retry and dead-letter handling", "Monitoring and scaling"]},
+          {"id": "PY-009", "type": "scenario", "difficulty": "advanced", "domain": "System Design", "question": "A production Python API has intermittent latency spikes under high traffic. Explain your investigation and remediation plan.", "expected_points": ["Observability", "Bottleneck analysis", "Caching or concurrency", "Load testing"]}
+        ]
+      }
+    },
+    "Data Analyst": {
+      "skill_domains": ["SQL", "Statistics", "Python", "Data Cleaning", "Visualization"],
+      "questions": {
+        "0-2": [
+          {"id": "DA-001", "type": "conceptual", "difficulty": "basic", "domain": "SQL", "question": "Explain the difference between INNER JOIN and LEFT JOIN with an example.", "expected_points": ["Join behavior", "Matching rows", "Unmatched rows", "Example"]},
+          {"id": "DA-002", "type": "practical", "difficulty": "basic", "domain": "Data Cleaning", "question": "Given a dataset with missing values and duplicate rows, describe or demonstrate how you would clean it using Python.", "expected_points": ["Missing-value detection", "Duplicate detection", "Appropriate treatment", "Validation"]},
+          {"id": "DA-003", "type": "scenario", "difficulty": "basic", "domain": "Statistics", "question": "A sales dashboard shows a sudden 30 percent drop. What would you check before reporting the result?", "expected_points": ["Data quality", "Date filters", "Comparison baseline", "Business context"]}
+        ],
+        "3-5": [
+          {"id": "DA-004", "type": "conceptual", "difficulty": "intermediate", "domain": "Statistics", "question": "Explain the difference between correlation and causation and how confusing them can affect business decisions.", "expected_points": ["Correct distinction", "Confounding variables", "Examples", "Decision risk"]},
+          {"id": "DA-005", "type": "practical", "difficulty": "intermediate", "domain": "SQL", "question": "Write a SQL query to identify the top three products by revenue in each region.", "expected_points": ["Aggregation", "Grouping", "Window function or equivalent", "Correct ranking"]},
+          {"id": "DA-006", "type": "scenario", "difficulty": "intermediate", "domain": "Visualization", "question": "Two dashboards show different revenue totals for the same period. How would you find the cause?", "expected_points": ["Metric definitions", "Filters and joins", "Source reconciliation", "Validation"]}
+        ],
+        "5+": [
+          {"id": "DA-007", "type": "conceptual", "difficulty": "advanced", "domain": "Statistics", "question": "Explain how you would design and interpret an A/B test, including statistical significance and practical impact.", "expected_points": ["Hypothesis", "Randomization", "Sample size", "Statistical and business significance"]},
+          {"id": "DA-008", "type": "practical", "difficulty": "advanced", "domain": "SQL", "question": "Design an efficient analytical query for a large customer transaction table and explain how you would optimize it.", "expected_points": ["Query structure", "Indexes or partitioning", "Execution plan", "Performance trade-offs"]},
+          {"id": "DA-009", "type": "scenario", "difficulty": "advanced", "domain": "Business Analytics", "question": "A business reports rising revenue but falling profit and customer retention. How would you investigate and present recommendations?", "expected_points": ["Metric decomposition", "Customer segmentation", "Root-cause analysis", "Actionable recommendations"]}
+        ]
+      }
+    },
+    "AWS Cloud Engineer": {
+      "skill_domains": ["AWS", "Networking", "Linux", "Containers", "Infrastructure as Code"],
+      "questions": {
+        "0-2": [
+          {"id": "AWS-001", "type": "conceptual", "difficulty": "basic", "domain": "AWS", "question": "Explain the purpose of EC2, S3 and IAM in AWS.", "expected_points": ["Compute", "Object storage", "Identity and access", "Use cases"]},
+          {"id": "AWS-002", "type": "practical", "difficulty": "basic", "domain": "Linux", "question": "Describe the commands you would use to inspect disk usage, running processes and service logs on Linux.", "expected_points": ["Relevant commands", "Correct usage", "Output interpretation", "Troubleshooting"]},
+          {"id": "AWS-003", "type": "scenario", "difficulty": "basic", "domain": "AWS", "question": "An EC2 instance cannot be reached over SSH. What basic checks would you perform?", "expected_points": ["Instance state", "Security groups", "Network configuration", "SSH credentials and logs"]}
+        ],
+        "3-5": [
+          {"id": "AWS-004", "type": "conceptual", "difficulty": "intermediate", "domain": "Networking", "question": "Explain how a VPC, public and private subnets, route tables and NAT gateways work together.", "expected_points": ["VPC structure", "Routing", "Internet gateway", "NAT behavior"]},
+          {"id": "AWS-005", "type": "practical", "difficulty": "intermediate", "domain": "Infrastructure as Code", "question": "Describe how you would use Terraform to provision a repeatable AWS environment.", "expected_points": ["Providers and resources", "Variables", "State management", "Plan and apply"]},
+          {"id": "AWS-006", "type": "scenario", "difficulty": "intermediate", "domain": "Containers", "question": "A containerized application repeatedly restarts in production. How would you troubleshoot it?", "expected_points": ["Container logs", "Health checks", "Resource limits", "Configuration and dependencies"]}
+        ],
+        "5+": [
+          {"id": "AWS-007", "type": "conceptual", "difficulty": "advanced", "domain": "AWS Architecture", "question": "Explain how you would design a highly available and disaster-resilient AWS architecture.", "expected_points": ["Multi-AZ design", "Backup and recovery", "Failover", "Recovery objectives"]},
+          {"id": "AWS-008", "type": "practical", "difficulty": "advanced", "domain": "Infrastructure as Code", "question": "Design a safe Terraform deployment workflow for multiple environments and concurrent team members.", "expected_points": ["Remote state", "State locking", "Environment isolation", "CI/CD and review"]},
+          {"id": "AWS-009", "type": "scenario", "difficulty": "advanced", "domain": "AWS Architecture", "question": "Cloud costs have increased sharply while application performance remains unchanged. How would you investigate and optimize the environment?", "expected_points": ["Cost allocation", "Utilization analysis", "Rightsizing", "Optimization and monitoring"]}
+        ]
+      }
+    },
+    "Cyber Security Analyst": {
+      "skill_domains": ["Network Security", "SIEM", "Incident Response", "Threat Analysis", "Python"],
+      "questions": {
+        "0-2": [
+          {"id": "CY-001", "type": "conceptual", "difficulty": "basic", "domain": "Network Security", "question": "Explain the difference between a vulnerability, a threat and a risk.", "expected_points": ["Accurate definitions", "Relationship", "Example", "Impact"]},
+          {"id": "CY-002", "type": "practical", "difficulty": "basic", "domain": "Threat Analysis", "question": "Given a suspicious email, describe the safe steps you would take to examine it.", "expected_points": ["Do not open attachments", "Inspect sender and headers", "Analyze links safely", "Report and document"]},
+          {"id": "CY-003", "type": "scenario", "difficulty": "basic", "domain": "Incident Response", "question": "An employee reports a suspicious login notification. What initial checks would you perform?", "expected_points": ["Verify alert", "Review authentication logs", "Check account activity", "Escalation"]}
+        ],
+        "3-5": [
+          {"id": "CY-004", "type": "conceptual", "difficulty": "intermediate", "domain": "SIEM", "question": "Explain how SIEM correlation rules can identify suspicious activity across multiple log sources.", "expected_points": ["Log aggregation", "Normalization", "Correlation", "Alert tuning"]},
+          {"id": "CY-005", "type": "practical", "difficulty": "intermediate", "domain": "Python", "question": "Describe how you would write a Python script to parse authentication logs and identify repeated failed logins.", "expected_points": ["Log parsing", "Counting failures", "Time-window logic", "False-positive handling"]},
+          {"id": "CY-006", "type": "scenario", "difficulty": "intermediate", "domain": "Incident Response", "question": "A workstation may be infected with malware. Explain your investigation and containment steps.", "expected_points": ["Evidence preservation", "Containment", "Endpoint analysis", "Escalation and recovery"]}
+        ],
+        "5+": [
+          {"id": "CY-007", "type": "conceptual", "difficulty": "advanced", "domain": "Threat Analysis", "question": "Explain how threat intelligence and MITRE ATT&CK can support detection engineering.", "expected_points": ["Threat context", "Tactics and techniques", "Detection mapping", "Coverage gaps"]},
+          {"id": "CY-008", "type": "practical", "difficulty": "advanced", "domain": "SIEM", "question": "Design a SIEM detection strategy for identifying credential compromise while controlling false positives.", "expected_points": ["Data sources", "Detection logic", "Baselining", "Tuning and validation"]},
+          {"id": "CY-009", "type": "scenario", "difficulty": "advanced", "domain": "Incident Response", "question": "Multiple systems show signs of lateral movement. Describe how you would coordinate investigation, containment and recovery.", "expected_points": ["Scope assessment", "Evidence preservation", "Containment strategy", "Recovery and lessons learned"]}
+        ]
+      }
+    }
+  }
+}
