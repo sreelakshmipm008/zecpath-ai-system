@@ -265,3 +265,38 @@ def test_full_candidate_score_contains_five_stage_details():
     assert result["job_role"] == "Software Engineer"
     assert result["evidence_complete"] is True
     assert len(result["round_scores"]) == 5
+
+@pytest.mark.parametrize(
+    "stage_scores, expected_complete",
+    [
+        (
+            {
+                "ats_score": 80,
+                "screening_score": 70,
+                "hr_interview_score": 90,
+                "technical_interview_score": 85,
+                "machine_test_score": 75,
+            },
+            True,
+        ),
+        (
+            {
+                "ats_score": 80,
+                "screening_score": 70,
+                "hr_interview_score": 90,
+                "technical_interview_score": 85,
+            },
+            False,
+        ),
+    ],
+)
+def test_cross_round_evidence_completeness_is_consistent(
+    stage_scores, expected_complete
+):
+    result = UnifiedScoringEngine().calculate_five_stage_hiring_fit(
+        **stage_scores
+    )
+
+    assert result["evidence_complete"] is expected_complete
+    assert result["human_review_required"] is (not expected_complete)
+    assert len(result["available_stages"]) + len(result["missing_stages"]) == 5

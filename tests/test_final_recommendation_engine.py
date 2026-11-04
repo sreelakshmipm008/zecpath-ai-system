@@ -191,3 +191,23 @@ def test_unresolved_risks_override_rejection_recommendation(
 
     assert result["decision_category"] == "Hold / Review"
     assert result["review_required"] is True
+
+@pytest.mark.parametrize(
+    "score, expected_category",
+    [
+        (80, "Selected"),
+        (60, "Hold / Review"),
+        (59.99, "Rejected"),
+    ],
+)
+def test_recommendation_threshold_boundaries(
+    complete_candidate_score, eligible_result, score, expected_category
+):
+    complete_candidate_score["hiring_fit_percentage"] = score
+    complete_candidate_score["unified_score"] = score
+
+    result = FinalRecommendationEngine().generate_recommendation(
+        complete_candidate_score, eligible_result
+    )
+
+    assert result["decision_category"] == expected_category

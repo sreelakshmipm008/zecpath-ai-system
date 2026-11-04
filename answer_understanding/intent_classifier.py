@@ -195,12 +195,12 @@ class IntentClassifier:
 
         for terms in cls.TERM_GROUPS.values():
             question_has_group = any(
-                term in question_normalized
+                re.search(rf"(?<!\w){re.escape(term)}(?!\w)", question_normalized)
                 for term in terms
             )
 
             answer_has_group = any(
-                term in answer_normalized
+                re.search(rf"(?<!\w){re.escape(term)}(?!\w)", answer_normalized)
                 for term in terms
             )
 

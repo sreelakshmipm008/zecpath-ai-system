@@ -121,3 +121,22 @@ def test_duration_alone_does_not_answer_specific_skill_question():
         "I have two years of experience.",
         "Tell me about your experience with data analysis.",
     ) == "off_topic"
+
+
+
+def test_short_synonym_does_not_match_inside_unrelated_word():
+    classifier = IntentClassifier()
+
+    assert classifier.classify(
+        "I have three years of experience in photography.",
+        "Tell me about your experience in human resources."
+    ) == "off_topic"
+
+
+def test_hr_abbreviation_still_matches_as_a_whole_term():
+    classifier = IntentClassifier()
+
+    assert classifier.classify(
+        "I worked in HR for two years.",
+        "Tell me about your human resources experience."
+    ) == "on_topic"
