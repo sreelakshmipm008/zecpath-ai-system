@@ -1,0 +1,68 @@
+{
+  "demo_name": "Zecpath AI Hiring Pipeline Demo",
+  "version": "1.0",
+  "notice": "All candidate records and results are fictional demonstration data.",
+  "jobs": [
+    {
+      "job_id": "JOB_DA_001",
+      "title": "Data Analyst",
+      "required_skills": ["Python", "SQL", "Excel", "Power BI"],
+      "minimum_experience": 0
+    },
+    {
+      "job_id": "JOB_PY_001",
+      "title": "Python Developer",
+      "required_skills": ["Python", "OOP", "SQL", "Git"],
+      "minimum_experience": 1
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "CAND_001",
+      "name": "Ananya Nair",
+      "job_id": "JOB_DA_001",
+      "resume_quality": "Strong",
+      "experience_years": 2,
+      "skills": ["Python", "SQL", "Excel", "Power BI"],
+      "screening_response": "I use SQL to extract data and Power BI to build dashboards and identify business trends.",
+      "interview_response": "I would first clean the dataset, handle missing values and then analyze trends using Python.",
+      "simulated_ats_score": 88,
+      "simulated_screening_result": "Pass",
+      "simulated_interview_result": "Strong"
+    },
+    {
+      "candidate_id": "CAND_002",
+      "name": "Rahul Menon",
+      "job_id": "JOB_DA_001",
+      "resume_quality": "Average",
+      "experience_years": 0,
+      "skills": ["Excel", "SQL"],
+      "screening_response": "I know basic Excel and SQL. I am learning Power BI.",
+      "interview_response": "I would check the data and try to find useful information.",
+      "simulated_ats_score": 62,
+      "simulated_screening_result": "Review",
+      "simulated_interview_result": "Average"
+    },
+    {
+      "candidate_id": "CAND_003",
+      "name": "Arjun Kumar",
+      "job_id": "JOB_PY_001",
+      "resume_quality": "Weak",
+      "experience_years": 0,
+      "skills": ["HTML", "CSS"],
+      "screening_response": "I am interested in software development but have limited Python experience.",
+      "interview_response": "I am not familiar with object-oriented programming.",
+      "simulated_ats_score": 35,
+      "simulated_screening_result": "Fail",
+      "simulated_interview_result": "Needs Improvement"
+    }
+  ],
+  "pipeline_stages": [
+    "Resume Parsing",
+    "ATS Scoring",
+    "Eligibility Evaluation",
+    "AI Screening",
+    "Interview Evaluation",
+    "Final Recommendation"
+  ]
+}
