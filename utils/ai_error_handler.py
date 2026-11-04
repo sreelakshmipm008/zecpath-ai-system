@@ -22,11 +22,19 @@ class AIErrorHandler:
 
     MAX_RETRIES = 2
 
+    @staticmethod
+    def _validate_retry_count(retry_count):
+        if isinstance(retry_count, bool) or not isinstance(retry_count, int):
+            raise TypeError("retry_count must be a non-negative integer")
+        if retry_count < 0:
+            raise ValueError("retry_count must be non-negative")
+
     def handle_missing_answer(
         self,
         retry_count: int = 0,
     ) -> ErrorHandlingResult:
         """Handle a missing candidate answer."""
+        self._validate_retry_count(retry_count)
 
         if retry_count < self.MAX_RETRIES:
             return ErrorHandlingResult(
@@ -49,6 +57,9 @@ class AIErrorHandler:
         retry_count: int = 0,
     ) -> ErrorHandlingResult:
         """Handle recoverable audio input issues safely."""
+        self._validate_retry_count(retry_count)
+        if not isinstance(issue, str) or not issue.strip():
+            raise ValueError("issue must be a non-empty string")
 
         if retry_count < self.MAX_RETRIES:
             return ErrorHandlingResult(
@@ -77,6 +88,7 @@ class AIErrorHandler:
         retry_count: int = 0,
     ) -> ErrorHandlingResult:
         """Handle detected background noise safely."""
+        self._validate_retry_count(retry_count)
 
         if not noise_detected:
             return ErrorHandlingResult(
@@ -113,6 +125,7 @@ class AIErrorHandler:
         retry_count: int = 0,
     ) -> ErrorHandlingResult:
         """Route an AI edge case to the appropriate recovery action."""
+        self._validate_retry_count(retry_count)
 
         if status == "missing":
             return self.handle_missing_answer(retry_count)

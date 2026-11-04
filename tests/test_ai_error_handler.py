@@ -68,3 +68,15 @@ def test_retry_limit_triggers_fallback():
 
     assert result.action == "fallback"
     assert result.retry_allowed is False
+
+import pytest
+
+@pytest.mark.parametrize("count", [-1, 1.5, "1", True, None])
+def test_invalid_retry_counts_are_rejected(count):
+    with pytest.raises((TypeError, ValueError)):
+        AIErrorHandler().handle("missing", retry_count=count)
+
+
+def test_empty_audio_issue_is_rejected():
+    with pytest.raises(ValueError):
+        AIErrorHandler().handle_audio_issue("  ")

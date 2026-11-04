@@ -67,3 +67,24 @@ def test_expired_responses_are_purged():
 def test_retention_period_must_be_positive():
     with pytest.raises(ValueError, match="retention_days"):
         InterviewState(session_id="privacy-5", retention_days=0)
+
+@pytest.mark.parametrize("response", [None, 123, [], {}])
+def test_invalid_response_values_are_rejected(response):
+    state = InterviewState(session_id="invalid-response")
+    state.grant_consent()
+    with pytest.raises(TypeError, match="response"):
+        state.record_response(question_id="Q001", response=response)
+    assert state.responses == []
+
+
+def test_empty_question_id_is_rejected():
+    state = InterviewState(session_id="empty-question")
+    state.grant_consent()
+    with pytest.raises(ValueError, match="question_id"):
+        state.record_response(question_id=" ", response="Answer")
+
+
+@pytest.mark.parametrize("days", [0, -1, 1.5, True, "30"])
+def test_invalid_retention_days_are_rejected(days):
+    with pytest.raises(ValueError, match="retention_days"):
+        InterviewState(session_id="invalid-retention", retention_days=days)

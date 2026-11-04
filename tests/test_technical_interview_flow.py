@@ -82,3 +82,9 @@ def test_to_dict_returns_session_state():
     assert result["current_phase"] == "experience_based"
     assert result["history"] == ["introduction", "experience_based"]
     assert result["is_complete"] is False
+
+@pytest.mark.parametrize("phase", [None, [], {}, 123])
+def test_invalid_phase_input_is_rejected(phase):
+    flow = TechnicalInterviewFlow()
+    with pytest.raises(ValueError, match="Unknown interview phase"):
+        flow.transition_to(phase)

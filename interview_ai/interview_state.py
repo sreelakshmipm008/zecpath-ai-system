@@ -54,8 +54,12 @@ class InterviewState:
     retention_days: int = 90
 
     def __post_init__(self) -> None:
-        if self.retention_days < 1:
-            raise ValueError("retention_days must be at least 1")
+        if (
+            isinstance(self.retention_days, bool)
+            or not isinstance(self.retention_days, int)
+            or self.retention_days < 1
+        ):
+            raise ValueError("retention_days must be a positive integer")
 
     def grant_consent(
         self,
@@ -122,6 +126,19 @@ class InterviewState:
             raise PermissionError(
                 "Candidate consent is required before recording responses."
             )
+
+        if not isinstance(question_id, str) or not question_id.strip():
+            raise ValueError("question_id must be a non-empty string")
+        if not isinstance(response, str):
+            raise TypeError("response must be a string")
+        if not isinstance(response_type, str) or not response_type.strip():
+            raise ValueError("response_type must be a non-empty string")
+        if question is not None and not isinstance(question, str):
+            raise TypeError("question must be a string or None")
+        if not isinstance(follow_up_eligible, bool):
+            raise TypeError("follow_up_eligible must be a boolean")
+        if follow_up_reason is not None and not isinstance(follow_up_reason, str):
+            raise TypeError("follow_up_reason must be a string")
 
         if isinstance(category, HRInterviewCategory):
             category_value = category.value

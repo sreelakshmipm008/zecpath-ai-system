@@ -39,7 +39,7 @@ class TechnicalInterviewFlow:
                 if isinstance(phase, TechnicalInterviewPhase)
                 else TechnicalInterviewPhase(phase)
             )
-        except ValueError as exc:
+        except (ValueError, TypeError) as exc:
             raise ValueError(f"Unknown interview phase: {phase}") from exc
 
         current_index = self.PHASE_ORDER.index(self.current_phase)
