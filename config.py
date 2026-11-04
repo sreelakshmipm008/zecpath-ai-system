@@ -37,3 +37,11 @@ HR_SCORING_WEIGHTS = {
     "confidence_score": 0.25,
     "consistency": 0.25,
 }
+
+# Technical Interview Scoring Weights
+TECHNICAL_SCORING_WEIGHTS = {
+    "accuracy": 0.40,
+    "explanation_depth": 0.20,
+    "logical_reasoning": 0.25,
+    "real_world_application": 0.15,
+}
