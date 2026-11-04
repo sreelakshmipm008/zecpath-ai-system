@@ -1,4 +1,4 @@
-﻿import json
+import json
 from copy import deepcopy
 from datetime import datetime, timezone
 
@@ -84,6 +84,60 @@ class HiringIntelligenceReportGenerator:
             if not section["available"]
         ]
 
+        def collect_findings(data, target_keys):
+            findings = []
+            def walk(value):
+                if isinstance(value, dict):
+                    for key, item in value.items():
+                        if key.lower() in target_keys and item:
+                            values = item if isinstance(item, list) else [item]
+                            for finding in values:
+                                if isinstance(finding, (str, int, float)):
+                                    findings.append(str(finding))
+                        else:
+                            walk(item)
+                elif isinstance(value, list):
+                    for item in value:
+                        walk(item)
+            walk(data)
+            return list(dict.fromkeys(findings))
+
+        source_data = {
+            name: section["data"]
+            for name, section in sections.items()
+            if section["available"]
+        }
+
+        candidate_ai_profile = {
+            "candidate_information": {
+                "candidate_id": candidate_id,
+                "candidate_name": candidate_name,
+                "job_role": job_role,
+            },
+            "assessment_history": [
+                {
+                    "assessment_stage": name,
+                    "status": section["status"],
+                }
+                for name, section in sections.items()
+            ],
+            "strengths": collect_findings(
+                source_data, {"strengths", "key_strengths"}
+            ),
+            "weaknesses": collect_findings(
+                source_data, {"weaknesses", "areas_for_improvement"}
+            ),
+            "risk_indicators": collect_findings(
+                source_data, {"risks", "risk_flags", "risk_indicators"}
+            ),
+            "final_recommendation": recommendation_data or None,
+            "profile_note": (
+                "Profile findings are extracted from supplied assessment data. "
+                "An empty list means no finding was supplied; it does not mean "
+                "the candidate has no strengths, weaknesses, or risks."
+            ),
+        }
+
         return {
             "report_title": "Hiring Intelligence Report",
             "generated_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -112,6 +166,7 @@ class HiringIntelligenceReportGenerator:
                     "final_decision_authority", "Human recruiter"
                 ),
             },
+            "candidate_ai_profile": candidate_ai_profile,
             "assessment_sections": sections,
             "report_completeness": {
                 "available_section_count": len(available_sections),
@@ -168,6 +223,17 @@ class HiringIntelligenceReportGenerator:
             "",
             "## Assessment Details",
         ]
+
+        profile = report.get("candidate_ai_profile", {})
+        if profile:
+            lines.extend([
+                "",
+                "## Full Candidate AI Profile",
+                "",
+                "```json",
+                json.dumps(profile, indent=2, ensure_ascii=False, default=str),
+                "```",
+            ])
 
         for name, section in report.get("assessment_sections", {}).items():
             lines.extend([

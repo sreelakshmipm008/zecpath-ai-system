@@ -114,3 +114,49 @@ def test_behavioral_observations_do_not_change_recommendation(generator):
 def test_invalid_section_type_is_rejected(generator):
     with pytest.raises(TypeError):
         generator.generate_report(screening_report="not a dictionary")
+
+def test_candidate_ai_profile_contains_candidate_history_and_findings(generator):
+    report = generator.generate_report(
+        ats_eligibility_result={
+            "candidate_name": "Anu",
+            "job_role": "Data Analyst",
+            "strengths": ["SQL knowledge"],
+        },
+        hr_summary={
+            "weaknesses": ["Communication needs improvement"],
+            "risk_flags": ["Inconsistent answers"],
+        },
+        final_recommendation={"decision_category": "Review"},
+    )
+
+    profile = report["candidate_ai_profile"]
+
+    assert profile["candidate_information"]["candidate_name"] == "Anu"
+    assert len(profile["assessment_history"]) == 7
+    assert "SQL knowledge" in profile["strengths"]
+    assert "Communication needs improvement" in profile["weaknesses"]
+    assert "Inconsistent answers" in profile["risk_indicators"]
+    assert profile["final_recommendation"]["decision_category"] == "Review"
+
+
+def test_candidate_profile_does_not_invent_findings(generator):
+    report = generator.generate_report()
+    profile = report["candidate_ai_profile"]
+
+    assert profile["strengths"] == []
+    assert profile["weaknesses"] == []
+    assert profile["risk_indicators"] == []
+
+def test_markdown_export_includes_full_candidate_profile(generator):
+    report = generator.generate_report(
+        ats_eligibility_result={
+            "candidate_name": "Anu",
+            "strengths": ["SQL knowledge"],
+        }
+    )
+
+    exported = generator.export_markdown(report)
+
+    assert "Full Candidate AI Profile" in exported
+    assert "SQL knowledge" in exported
+    assert "assessment_history" in exported
