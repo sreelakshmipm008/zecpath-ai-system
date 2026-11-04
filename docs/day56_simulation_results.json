@@ -1,0 +1,163 @@
+{
+  "simulation_type": "Synthetic end-to-end hiring simulation",
+  "candidate_count": 3,
+  "execution_seconds": 0.0103,
+  "decision_matches": 3,
+  "decision_mismatches": 0,
+  "reference_agreement_percentage": 100.0,
+  "candidates": [
+    {
+      "candidate_id": "SIM001",
+      "candidate_name": "Candidate A",
+      "stage_scores": {
+        "ats": 88.35,
+        "screening": 88.75,
+        "hr_interview": 71.5,
+        "technical_interview": 84.5,
+        "machine_test": 88
+      },
+      "unified_score": 84.22,
+      "evidence_complete": true,
+      "ai_decision": "Selected",
+      "simulated_human_reference": "Selected",
+      "decision_match": true,
+      "recommendation": {
+        "candidate_id": "SIM001",
+        "candidate_name": "Candidate A",
+        "job_role": "default",
+        "decision_category": "Selected",
+        "unified_score": 84.22,
+        "eligibility_status": "eligible",
+        "recommendation_confidence": {
+          "score": 100.0,
+          "level": "complete",
+          "available_stages": [
+            "ats",
+            "screening",
+            "hr_interview",
+            "technical_interview",
+            "machine_test"
+          ],
+          "missing_stages": [],
+          "eligibility_evaluated": true,
+          "meaning": "Evidence completeness indicator only; not a probability of recommendation correctness."
+        },
+        "reasons": [
+          "Unified score meets the configured selected threshold."
+        ],
+        "eligibility_findings": [],
+        "hr_risk_findings": [],
+        "integrity_review_items": [],
+        "behavioral_observations": {},
+        "review_required": true,
+        "review_items": [],
+        "final_decision_authority": "Human recruiter",
+        "decision_note": "This is an explainable decision-support recommendation, not an automated final employment decision. Behavioral observations are informational and do not independently determine candidate suitability."
+      }
+    },
+    {
+      "candidate_id": "SIM002",
+      "candidate_name": "Candidate B",
+      "stage_scores": {
+        "ats": 71.05,
+        "screening": 80.0,
+        "hr_interview": 71.5,
+        "technical_interview": 59.75,
+        "machine_test": 58
+      },
+      "unified_score": 68.06,
+      "evidence_complete": true,
+      "ai_decision": "Hold / Review",
+      "simulated_human_reference": "Hold / Review",
+      "decision_match": true,
+      "recommendation": {
+        "candidate_id": "SIM002",
+        "candidate_name": "Candidate B",
+        "job_role": "default",
+        "decision_category": "Hold / Review",
+        "unified_score": 68.06,
+        "eligibility_status": "eligible",
+        "recommendation_confidence": {
+          "score": 100.0,
+          "level": "complete",
+          "available_stages": [
+            "ats",
+            "screening",
+            "hr_interview",
+            "technical_interview",
+            "machine_test"
+          ],
+          "missing_stages": [],
+          "eligibility_evaluated": true,
+          "meaning": "Evidence completeness indicator only; not a probability of recommendation correctness."
+        },
+        "reasons": [
+          "Unified score falls within the intermediate review range."
+        ],
+        "eligibility_findings": [],
+        "hr_risk_findings": [],
+        "integrity_review_items": [],
+        "behavioral_observations": {},
+        "review_required": true,
+        "review_items": [],
+        "final_decision_authority": "Human recruiter",
+        "decision_note": "This is an explainable decision-support recommendation, not an automated final employment decision. Behavioral observations are informational and do not independently determine candidate suitability."
+      }
+    },
+    {
+      "candidate_id": "SIM003",
+      "candidate_name": "Candidate C",
+      "stage_scores": {
+        "ats": 50.6,
+        "screening": 73.75,
+        "hr_interview": 80.32,
+        "technical_interview": 36.75,
+        "machine_test": 38
+      },
+      "unified_score": 55.88,
+      "evidence_complete": true,
+      "ai_decision": "Rejected",
+      "simulated_human_reference": "Rejected",
+      "decision_match": true,
+      "recommendation": {
+        "candidate_id": "SIM003",
+        "candidate_name": "Candidate C",
+        "job_role": "default",
+        "decision_category": "Rejected",
+        "unified_score": 55.88,
+        "eligibility_status": "eligible",
+        "recommendation_confidence": {
+          "score": 100.0,
+          "level": "complete",
+          "available_stages": [
+            "ats",
+            "screening",
+            "hr_interview",
+            "technical_interview",
+            "machine_test"
+          ],
+          "missing_stages": [],
+          "eligibility_evaluated": true,
+          "meaning": "Evidence completeness indicator only; not a probability of recommendation correctness."
+        },
+        "reasons": [
+          "Unified score is below the configured rejection threshold."
+        ],
+        "eligibility_findings": [],
+        "hr_risk_findings": [],
+        "integrity_review_items": [],
+        "behavioral_observations": {},
+        "review_required": true,
+        "review_items": [],
+        "final_decision_authority": "Human recruiter",
+        "decision_note": "This is an explainable decision-support recommendation, not an automated final employment decision. Behavioral observations are informational and do not independently determine candidate suitability."
+      }
+    }
+  ],
+  "limitations": [
+    "Candidate data is synthetic.",
+    "Human reference decisions are predefined simulation labels, not actual recruiter decisions.",
+    "Technical rubric ratings are simulated assessor inputs.",
+    "Execution time is a local sample, not a production benchmark."
+  ]
+}
